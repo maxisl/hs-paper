@@ -50,7 +50,7 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{The Name of the Title is ioio}
+\title{Human Prompting Behavior in LLM Interactions}
 
 %%
 %% The "author" command and its associated commands are used to define
@@ -58,9 +58,9 @@
 %% Of note is the shared affiliation of the first two authors, and the
 %% "authornote" and "authornotemark" commands
 %% used to denote shared contribution to the research.
-\author{Max}
+\author{Maximilian Slapnik}
 %\orcid{1234-5678-9012}
-\email{Max.Mustermann@lmu.de}
+\email{Maximilian.Slapnik@campus.lmu.de}
 \affiliation{%
   \institution{LMU Munich}
   \city{Munich}
@@ -80,12 +80,13 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
 \begin{abstract}
-  A clear and well-documented \LaTeX\ document is presented as an
-  article formatted for publication by ACM in a conference proceedings
-  or journal publication. Based on the ``acmart'' document class, this
-  article presents and explains many of the common variations, as well
-  as many of the formatting elements an author may use in the
-  preparation of the documentation of their work.
+  Artificial Intelligence (AI) plays an increasingly important role in the daily lives of millions of people.
+  Large Language Models (LLMs) are the most prominent implementation of AI that is used not only by experts, but also ordinary users.
+  LLMs can respond to any textual input (prompts) with human-like answers, based on the training data that was used to implement the model.
+  Even though prompting LLMs seems very straightforward, the question arises one can optimize interactions with said models.
+  This is also due to the fact that although LLMs provide a distinct output, it is not easily traceable how the model got to this output in the first place.
+  Therefore, we explore the behavior of a randomized trial of 100 interactions of users with LLMs.
+  By investigating reoccurring patterns in behavior, evaluating human tendencies when interacting with AI models, as well as biases of users we try to understand current behaviors as well as optimization potential.
 \end{abstract}
 
 %%
@@ -125,27 +126,17 @@
 %% information and builds the first part of the formatted document.
 \maketitle
 
-% 1. Abstract
-\section{Abstract}
-Artificial Intelligence (AI) plays an increasingly important role in the daily lives of millions of people.
-Large Language Models (LLMs) are the most prominent implementation of AI that is used not only by experts, but also non-technical users.
-LLMs can respond to any textual input (prompts) with human-like answers, based on the training data that was used to implement the model.
-Even though prompting LLMs seems very straightforward, the question arises one can optimize interactions with said models.
-This is also due to the fact that although LLMs provide a distinct output, it is not easily traceable how the model got to this output in the first place.
-Therefore, we explore the behavior of a randomized trial of 100 interactions of users with LLMs.
-By investigating reoccurring patterns in behavior, evaluating human tendencies when interacting with AI models, as well as biases of users we try to understand current behaviors as well as optimization potential.
 
-
-% 2. Introduction
+% 1. Introduction
 \section{Introduction}
 
-% 3. Background and Related Work
+% 2. Background and Related Work
 \section{Background and Related Work}
   \subsection{Large Language Models (LLMs)}
 $\circ$ General information on LLMs
   \subsection{User Interaction with LLMs}
 
-% 4. Study on Usage Patterns of LLM Users
+% 3. Study on Usage Patterns of LLM Users
 \section{Study on Usage Patterns of LLM Users}
   \subsection{Intro and Research Objective}
   \subsection{Research Method: ShareGPT}
@@ -153,7 +144,7 @@ $\circ$ General information on LLMs
     \subsubsection{Findings}
     \subsubsection{Observable Trends}
 
-% 5. Discussion
+% 4. Discussion
 \section{Discussion}
   \subsection{Observed Behaviour (Synthesis)}
     \subsubsection{Why do people interact with LLMs the way they do?}
@@ -162,7 +153,7 @@ $\circ$ General information on LLMs
     \subsubsection{Auto-GPT}
     \subsubsection{Prompt Engineering}
 
-% 6. Conclusion
+% 5. Conclusion
 \section{Conclusion}
 
 

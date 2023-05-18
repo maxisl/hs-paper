@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+\label{ch:introduction}
+
+TODO Intro
+
+% refer to https://intra.ece.ucr.edu/~rlake/Whitesides_writing_res_paper.pdf for tips on introduction?
+% INTRO - TOPIC
+With the exponential growth of network traffic and the fast emergence of technological evolutions like the Web 4.0, demand for adapted concepts to cope with associated challenges arises inevitably.
+One of the main challenges is the efficient storing, persisting, and querying of increasing amounts of data.
+% connectivity is a given
+Today, connectivity is ever prevalent, which is reflected in the fact that countless devices can communicate via the internet, such as refrigerators, vending machines, or even toothbrushes.
+This ongoing evolution, often referred to as the \ac{iot}, is one of the fastest expanding fields of modern technology and is characterized by fast accumulation of short-lived, frequently varying network data.
+Due to this characteristic, monitoring of changes and developments is particularly challenging, especially if attempted in retrospect.
+
+% GRAPH DATABASES
+To represent networks in the realm of \ac{iot}, as well as interconnected systems in general, graph databases are an increasingly popular solution.
+Their widespread adaption can be mainly attributed to their innovative possibilities to store data in an unstructured and flexible way, as well as their accurate representation of certain real world scenarios, such as sensor networks.
+
+% PERSISTENCE
+Data persistence is a prerequisite for the analysis of historical records.
+It centers around the longterm storage, accessibility and usability of former states of information.
+Achieving persistence of information is particularly challenging due to the diverse set of requirements attached to it, such as immutability and comprehensibility of past data to enable auditability and traceability of the past.
+
+% EXISTING APPROACHES + PROCEDURE
+What needs to be established is a concept that allows efficient management of the entire lifecycle of network data, beginning with the capturing of new information, to storing it in the longterm, and finally being able to query and access historical records.
+Data overhead should be minimized at the same time.
+Research has been conducted already to achieve persistence of data structures in general, as well as of key-value stores or hierarchically structured information.
+We will investigate these approaches and propose a conceptual approach that integrates existing knowledge, while simultaneously leveraging new technologies in the form of graph databases in order to achieve a scalable and reliable time-based concept for persisting and querying network data.
+% delete? then it's one single page
+% This approach will be evaluated in regard to general requirements of persistence as well as individual challenges in an \ac{iot} network use case in the final part of the thesis.

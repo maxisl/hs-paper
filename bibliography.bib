@@ -1,12 +1,65 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Maximilian Slapnik at 2023-05-24 18:28:37 +0200 
+%% Created for Maximilian Slapnik at 2023-05-24 19:01:52 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@misc{shuster_blenderbot_2022,
+	abstract = {We present BlenderBot 3, a 175B parameter dialogue model capable of open-domain conversation with access to the internet and a longterm memory, and having been trained on a large number of user defined tasks. We release both the model weights and code, and have also deployed the model on a public web page to interact with organic users. This technical report describes how the model was built (architecture, model and training scheme), and details of its deployment, including safety mechanisms. Human evaluations show its superiority to existing open-domain dialogue agents, including its predecessors (Roller et al., 2021; Komeili et al., 2022). Finally, we detail our plan for continual learning using the data collected from deployment, which will also be publicly released. The goal of this research program is thus to enable the community to study ever-improving responsible agents that learn through interaction.},
+	author = {Shuster, Kurt and Xu, Jing and Komeili, Mojtaba and Ju, Da and Smith, Eric Michael and Roller, Stephen and Ung, Megan and Chen, Moya and Arora, Kushal and Lane, Joshua and Behrooz, Morteza and Ngan, William and Poff, Spencer and Goyal, Naman and Szlam, Arthur and Boureau, Y.-Lan and Kambadur, Melanie and Weston, Jason},
+	date-added = {2023-05-24 19:01:50 +0200},
+	date-modified = {2023-05-24 19:01:50 +0200},
+	file = {Shuster et al. - 2022 - BlenderBot 3 a deployed conversational agent that.pdf:/Users/maximilianslapnik/Zotero/storage/DIDB6ZFQ/Shuster et al. - 2022 - BlenderBot 3 a deployed conversational agent that.pdf:application/pdf},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language},
+	language = {en},
+	month = aug,
+	note = {arXiv:2208.03188 [cs]},
+	publisher = {arXiv},
+	shorttitle = {{BlenderBot} 3},
+	title = {{BlenderBot} 3: a deployed conversational agent that continually learns to responsibly engage},
+	url = {http://arxiv.org/abs/2208.03188},
+	urldate = {2023-05-24},
+	year = {2022},
+	bdsk-url-1 = {http://arxiv.org/abs/2208.03188}}
+
+@misc{glaese_improving_2022,
+	abstract = {We present Sparrow, an information-seeking dialogue agent trained to be more helpful, correct, and harmless compared to prompted language model baselines. We use reinforcement learning from human feedback to train our models with two new additions to help human raters judge agent behaviour. First, to make our agent more helpful and harmless, we break down the requirements for good dialogue into natural language rules the agent should follow, and ask raters about each rule separately. We demonstrate that this breakdown enables us to collect more targeted human judgements of agent behaviour and allows for more efficient rule-conditional reward models. Second, our agent provides evidence from sources supporting factual claims when collecting preference judgements over model statements. For factual questions, evidence provided by Sparrow supports the sampled response 78\% of the time. Sparrow is preferred more often than baselines while being more resilient to adversarial probing by humans, violating our rules only 8\% of the time when probed. Finally, we conduct extensive analyses showing that though our model learns to follow our rules it can exhibit distributional biases.},
+	author = {Glaese, Amelia and McAleese, Nat and Tr{\k e}bacz, Maja and Aslanides, John and Firoiu, Vlad and Ewalds, Timo and Rauh, Maribeth and Weidinger, Laura and Chadwick, Martin and Thacker, Phoebe and Campbell-Gillingham, Lucy and Uesato, Jonathan and Huang, Po-Sen and Comanescu, Ramona and Yang, Fan and See, Abigail and Dathathri, Sumanth and Greig, Rory and Chen, Charlie and Fritz, Doug and Elias, Jaume Sanchez and Green, Richard and Mokr{\'a}, So{\v n}a and Fernando, Nicholas and Wu, Boxi and Foley, Rachel and Young, Susannah and Gabriel, Iason and Isaac, William and Mellor, John and Hassabis, Demis and Kavukcuoglu, Koray and Hendricks, Lisa Anne and Irving, Geoffrey},
+	date-added = {2023-05-24 18:59:55 +0200},
+	date-modified = {2023-05-24 18:59:55 +0200},
+	file = {Glaese et al. - 2022 - Improving alignment of dialogue agents via targete.pdf:/Users/maximilianslapnik/Zotero/storage/AK7V6HH5/Glaese et al. - 2022 - Improving alignment of dialogue agents via targete.pdf:application/pdf},
+	keywords = {Computer Science - Computation and Language, Computer Science - Machine Learning},
+	language = {en},
+	month = sep,
+	note = {arXiv:2209.14375 [cs]},
+	publisher = {arXiv},
+	title = {Improving alignment of dialogue agents via targeted human judgements},
+	url = {http://arxiv.org/abs/2209.14375},
+	urldate = {2023-05-24},
+	year = {2022},
+	bdsk-url-1 = {http://arxiv.org/abs/2209.14375}}
+
+@misc{thoppilan_lamda_2022,
+	abstract = {We present LaMDA: Language Models for Dialog Applications. LaMDA is a family of Transformerbased neural language models specialized for dialog, which have up to 137B parameters and are pre-trained on 1.56T words of public dialog data and web text. While model scaling alone can improve quality, it shows less improvements on safety and factual grounding. We demonstrate that fine-tuning with annotated data and enabling the model to consult external knowledge sources can lead to significant improvements towards the two key challenges of safety and factual grounding. The first challenge, safety, involves ensuring that the model's responses are consistent with a set of human values, such as preventing harmful suggestions and unfair bias. We quantify safety using a metric based on an illustrative set of human values, and we find that filtering candidate responses using a LaMDA classifier fine-tuned with a small amount of crowdworker-annotated data offers a promising approach to improving model safety. The second challenge, factual grounding, involves enabling the model to consult external knowledge sources, such as an information retrieval system, a language translator, and a calculator. We quantify factuality using a groundedness metric, and we find that our approach enables the model to generate responses grounded in known sources, rather than responses that merely sound plausible. Finally, we explore the use of LaMDA in the domains of education and content recommendations, and analyze their helpfulness and role consistency.},
+	author = {Thoppilan, Romal and De Freitas, Daniel and Hall, Jamie and Shazeer, Noam and Kulshreshtha, Apoorv and Cheng, Heng-Tze and Jin, Alicia and Bos, Taylor and Baker, Leslie and Du, Yu and Li, YaGuang and Lee, Hongrae and Zheng, Huaixiu Steven and Ghafouri, Amin and Menegali, Marcelo and Huang, Yanping and Krikun, Maxim and Lepikhin, Dmitry and Qin, James and Chen, Dehao and Xu, Yuanzhong and Chen, Zhifeng and Roberts, Adam and Bosma, Maarten and Zhao, Vincent and Zhou, Yanqi and Chang, Chung-Ching and Krivokon, Igor and Rusch, Will and Pickett, Marc and Srinivasan, Pranesh and Man, Laichee and Meier-Hellstern, Kathleen and Morris, Meredith Ringel and Doshi, Tulsee and Santos, Renelito Delos and Duke, Toju and Soraker, Johnny and Zevenbergen, Ben and Prabhakaran, Vinodkumar and Diaz, Mark and Hutchinson, Ben and Olson, Kristen and Molina, Alejandra and Hoffman-John, Erin and Lee, Josh and Aroyo, Lora and Rajakumar, Ravi and Butryna, Alena and Lamm, Matthew and Kuzmina, Viktoriya and Fenton, Joe and Cohen, Aaron and Bernstein, Rachel and Kurzweil, Ray and Aguera-Arcas, Blaise and Cui, Claire and Croak, Marian and Chi, Ed and Le, Quoc},
+	date-added = {2023-05-24 18:50:43 +0200},
+	date-modified = {2023-05-24 18:50:43 +0200},
+	file = {Thoppilan et al. - 2022 - LaMDA Language Models for Dialog Applications.pdf:/Users/maximilianslapnik/Zotero/storage/PD4FXT6T/Thoppilan et al. - 2022 - LaMDA Language Models for Dialog Applications.pdf:application/pdf},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language},
+	language = {en},
+	month = feb,
+	note = {arXiv:2201.08239 [cs]},
+	publisher = {arXiv},
+	shorttitle = {{LaMDA}},
+	title = {{LaMDA}: {Language} {Models} for {Dialog} {Applications}},
+	url = {http://arxiv.org/abs/2201.08239},
+	urldate = {2023-05-24},
+	year = {2022},
+	bdsk-url-1 = {http://arxiv.org/abs/2201.08239}}
 
 @article{radford_improving_2018,
 	abstract = {Natural language understanding comprises a wide range of diverse tasks such as textual entailment, question answering, semantic similarity assessment, and document classification. Although large unlabeled text corpora are abundant, labeled data for learning these specific tasks is scarce, making it challenging for discriminatively trained models to perform adequately. We demonstrate that large gains on these tasks can be realized by generative pre-training of a language model on a diverse corpus of unlabeled text, followed by discriminative fine-tuning on each specific task. In contrast to previous approaches, we make use of task-aware input transformations during fine-tuning to achieve effective transfer while requiring minimal changes to the model architecture. We demonstrate the effectiveness of our approach on a wide range of benchmarks for natural language understanding. Our general task-agnostic model outperforms discriminatively trained models that use architectures specifically crafted for each task, significantly improving upon the state of the art in 9 out of the 12 tasks studied. For instance, we achieve absolute improvements of 8.9\% on commonsense reasoning (Stories Cloze Test), 5.7\% on question answering (RACE), and 1.5\% on textual entailment (MultiNLI).},

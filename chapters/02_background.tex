@@ -5,8 +5,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LLMs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Large Language Models (LLMs)}
 \label{subsec:large-language-models-(llms)}
-
-One of the most widely used applications areas of generative AI today are Large Language Models.
+% TODO too repetitive?
+One of the most widely used applications areas of generative AI are Large Language Models (LLMs).
 Among LLMs, the most widely adopted is ChatGPT~\cite{openai_chatgpt_2023}, which is a
 conversational model being developed by OpenAI\@.
 The model is currently publicly accessible free of charge.
@@ -14,16 +14,16 @@ The model is currently publicly accessible free of charge.
 % What is an LLM? What does it look like?
 LLMs can be leveraged for a variety of tasks, but their main focus area is Natural Language Processing
 (NLP).
-Therefore, most LLMs designed for end users are implemented as a chatbots, as is the case with ChatGPT
-for example.
-They typically consist of an interface made up of an input field for the user to type in arbitrary text, as well as
-an output section that displays generated responses of the model.
+Therefore, most LLMs designed for end users are implemented in the form of chatbots,
+as is the case with ChatGPT for example.
+They typically consist of an interface comprised of an input field for the user to type in arbitrary
+text, as well as an output section that displays generated responses of the model.
 
 % How does an LLM / ChatGPT work?
-Large Language Models gained traction after the development of the original transformer architecture,
-which is a deep learning approach first introduced by researchers in 2017~\cite{vaswani_attention_2017}.
+Large Language Models noticeably gained traction after the introduction of the original transformer
+architecture, which is a deep learning approach first introduced by researchers in 2017~\cite{vaswani_attention_2017}.
 Based on this architecture, the Generative Pre-Training (GPT)~\cite{radford_improving_2018} approach
-was developed for text-based models in particular, which is the foundation for today's most popular
+was developed for text-based models in particular, laying the foundation for today's most popular
 conversational LLMs, such as ChatGPT\@.
 Since our research revolves around user interaction with dialog-focused models, we will not go into
 more detail about other application and development areas of LLMs.
@@ -33,7 +33,13 @@ BlenderBot 3~\cite{shuster_blenderbot_2022}.
 
 
 % Why are LLMs important for our work? How do they come into play?
+LLMs are a central part of our research as we investigate user behavior in LLM conversations.
+Currently, there are no binding guidelines on usage and prompting of such models,
+and users are therefore completely unconfined in their way of interacting with them.
 
 
-\subsubsection{One-Shot Learning}
+\subsubsection{Zero-Shot Learning}
+It is important to clarify different possible forms of prompts that exist in LLM interactions.
+In the following, we will clarify the terms \("\)Zero-Shot-\("\) as well as \("\)Few-Shot Learning\("\).
+One
 \subsubsection{Few-Shot Learning}

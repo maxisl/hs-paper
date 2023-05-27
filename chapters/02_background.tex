@@ -39,7 +39,7 @@ conversations.
 Currently, there are no binding guidelines on usage and prompting of such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
-\subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting?
+\subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting instead of learning?
 It is important to differentiate possible forms of prompting that exist in LLM interactions in order
 to be able to correctly analyze and assess prompts in later parts of this paper.
 To do so, we will clarify the terms \("\)Zero-Shot-\("\) as well as \("\)Few-Shot Learning\("\).
@@ -60,7 +60,7 @@ Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
 To exemplify the learning capabilities, we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} using the current ChatGPT-3 model:
 
-
+% TODO fix table layout
 \begin{table}
     \centering
     \caption{Odd Number Sum Evaluations}
@@ -82,22 +82,22 @@ and recent online resources~\cite{dairai_few-shot_2023} using the current ChatGP
     & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 
     \textit{A: & The answer is False.
-    The odd numbers in this group (15, 5, 13, 7, and 1) add up to 41, which is an odd number, not an even number.}\\
+    The odd numbers in this group (15, 5, 13, 7, and 1) add up to 41, which is an odd number,
+        not an even number.}\\
     \bottomrule
     \end{tabularx}
     \label{tab:odd_number_sum}
 \end{table}
 
-This example prompt, we could recreate the effects observed by other researchers.
-Indeed, the request of the user is first wrongly answered by the model using a zero-shot
-approach.
-Only when relying on few-shot prompting, and supplying ChatGPT-3 with additional information,
-the model generates the correct answer.
+Using this example prompt, we could recreate the effects observed by other researchers.
+We can observe that the request of the user is indeed first wrongly answered by the model
+using a zero-shot approach.
+Only when relying on few-shot prompting and supplying ChatGPT-3 with additional information,
+the model generates the correct result.
 
-We should note however, that ChatGPT is a dedicated language model.
+We should note however, that ChatGPT is a dedicated language model and we have used ChatGPT-3.
 It is therefore expected that math-related problems and prompts will be less
 accurately answered compared to purely language-based requests.
+Depending on the model training it is possible that future iterations, such as ChatGPT-4,
+will presumably improve performance and may not have to rely on few-shot examples.
 
-
-Even though both approaches give direction to the model, they vary in the amount of information that
-is provided.

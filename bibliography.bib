@@ -1,12 +1,46 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Maximilian Slapnik at 2023-05-25 21:15:22 +0200 
+%% Created for Maximilian Slapnik at 2023-05-27 08:14:37 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@misc{brown_language_2020,
+	abstract = {Recent work has demonstrated substantial gains on many NLP tasks and benchmarks by pre-training on a large corpus of text followed by fine-tuning on a specific task. While typically task-agnostic in architecture, this method still requires task-specific fine-tuning datasets of thousands or tens of thousands of examples. By contrast, humans can generally perform a new language task from only a few examples or from simple instructions -- something which current NLP systems still largely struggle to do. Here we show that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even reaching competitiveness with prior state-of-the-art finetuning approaches. Specifically, we train GPT-3, an autoregressive language model with 175 billion parameters, 10x more than any previous non-sparse language model, and test its performance in the few-shot setting. For all tasks, GPT-3 is applied without any gradient updates or fine-tuning, with tasks and few-shot demonstrations specified purely via text interaction with the model. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation, such as unscrambling words, using a novel word in a sentence, or performing 3-digit arithmetic. At the same time, we also identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora. Finally, we find that GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans. We discuss broader societal impacts of this finding and of GPT-3 in general.},
+	author = {Brown, Tom B. and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie and Kaplan, Jared and Dhariwal, Prafulla and Neelakantan, Arvind and Shyam, Pranav and Sastry, Girish and Askell, Amanda and Agarwal, Sandhini and Herbert-Voss, Ariel and Krueger, Gretchen and Henighan, Tom and Child, Rewon and Ramesh, Aditya and Ziegler, Daniel M. and Wu, Jeffrey and Winter, Clemens and Hesse, Christopher and Chen, Mark and Sigler, Eric and Litwin, Mateusz and Gray, Scott and Chess, Benjamin and Clark, Jack and Berner, Christopher and McCandlish, Sam and Radford, Alec and Sutskever, Ilya and Amodei, Dario},
+	date-added = {2023-05-27 08:14:34 +0200},
+	date-modified = {2023-05-27 08:14:34 +0200},
+	file = {Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf:/Users/maximilianslapnik/Zotero/storage/UMFG7ESD/Brown et al. - 2020 - Language Models are Few-Shot Learners.pdf:application/pdf},
+	keywords = {Computer Science - Computation and Language},
+	language = {en},
+	month = jul,
+	note = {arXiv:2005.14165 [cs]},
+	publisher = {arXiv},
+	title = {Language {Models} are {Few}-{Shot} {Learners}},
+	url = {http://arxiv.org/abs/2005.14165},
+	urldate = {2023-05-27},
+	year = {2020},
+	bdsk-url-1 = {http://arxiv.org/abs/2005.14165}}
+
+@misc{samuel_offline_2022,
+	abstract = {Few-shot learning is an important, but challenging problem of machine learning aimed at learning from only fewer labeled training examples. It has become an active area of research due to deep learning requiring huge amounts of labeled dataset, which is not feasible in the real world. Learning from a few examples is also an important attempt towards learning like humans. Few-shot learning has proven a very good promise in different areas of machine learning applications, particularly in image classification. As it is a recent technique, most researchers focus on understanding and solving the issues related to its concept by focusing only on common image datasets like Mini-ImageNet and Omniglot. Few-shot learning also opens an opportunity to address low resource languages like Amharic. In this study, offline handwritten Amharic character recognition using few-shot learning is addressed. Particularly, prototypical networks, the popular and simpler type of fewshot learning, is implemented as a baseline. Using the opportunities explored in the nature of Amharic alphabet having row-wise and columnwise similarities, a novel way of augmenting the training episodes is proposed. The experimental results show that the proposed method outperformed the baseline method. This study has implemented few-shot learning for Amharic characters for the first time. More importantly, the findings of the study open new ways of examining the influence of training episodes in few-shot learning, which is one of the important issues that needs exploration. The datasets used for this study are collected from native Amharic language writers using an Android App developed as a part of this study.},
+	author = {Samuel, Mesay and Schmidt-Thieme, Lars and Sharma, D. P. and Sinamo, Abiot and Bruck, Abey},
+	date-added = {2023-05-27 07:37:03 +0200},
+	date-modified = {2023-05-27 07:37:03 +0200},
+	file = {Samuel et al. - 2022 - Offline Handwritten Amharic Character Recognition .pdf:/Users/maximilianslapnik/Zotero/storage/89MEREMV/Samuel et al. - 2022 - Offline Handwritten Amharic Character Recognition .pdf:application/pdf},
+	keywords = {Computer Science - Computer Vision and Pattern Recognition},
+	language = {en},
+	month = oct,
+	note = {arXiv:2210.00275 [cs]},
+	publisher = {arXiv},
+	title = {Offline {Handwritten} {Amharic} {Character} {Recognition} {Using} {Few}-shot {Learning}},
+	url = {http://arxiv.org/abs/2210.00275},
+	urldate = {2023-05-27},
+	year = {2022},
+	bdsk-url-1 = {http://arxiv.org/abs/2210.00275}}
 
 @incollection{feris_embarrassingly_2015,
 	abstract = {Zero-shot learning consists in learning how to recognise new concepts by just having a description of them. Many sophisticated approaches have been proposed to address the challenges this problem comprises. In this paper we describe a zero-shot learning approach that can be implemented in just one line of code, yet it is able to outperform state of the art approaches on standard datasets. The approach is based on a more general framework which models the relationships between features, attributes, and classes as a two linear layers network, where the weights of the top layer are not learned but are given by the environment. We further provide a learning bound on the generalisation error of this kind of approaches, by casting them as domain adaptation methods. In experiments carried out on three standard real datasets, we found that our approach is able to perform significantly better than the state of art on all of them, obtaining a ratio of improvement up to 17\%.},

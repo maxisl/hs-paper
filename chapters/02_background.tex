@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BACKGROUND %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 \label{sec:background}
 
@@ -39,6 +39,7 @@ conversations.
 Currently, there are no binding guidelines on usage and prompting of such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting instead of learning?
 It is important to differentiate possible forms of prompting that exist in LLM interactions in order
 to be able to correctly analyze and assess prompts in later parts of this paper.
@@ -51,6 +52,7 @@ a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
 An example for such a query could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Few-Shot Learning}
 In Few-Shot Learning, examples are provided, albeit not many.
 It is generally aimed at providing good learning performance with only a few (most often less than 20)
@@ -95,9 +97,12 @@ using a zero-shot approach.
 Only when relying on few-shot prompting and supplying ChatGPT-3 with additional information,
 the model generates the correct result.
 
-We should note however, that ChatGPT is a dedicated language model and we have used ChatGPT-3.
+We should note however, that ChatGPT is a dedicated language model, and we have used ChatGPT-3.
 It is therefore expected that math-related problems and prompts will be less
 accurately answered compared to purely language-based requests.
 Depending on the model training it is possible that future iterations, such as ChatGPT-4,
-will presumably improve performance and may not have to rely on few-shot examples.
+will presumably improve performance and may therefore not have to rely on few-shot assistance as much.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER INTERACTION WITH LLMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{User Interaction with LLMs)}
+\label{subsec:user-interaction-with-llms)}

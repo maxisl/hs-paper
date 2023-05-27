@@ -3,6 +3,7 @@
 \label{sec:background}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LLMs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Large Language Models (LLMs)}
 \label{subsec:large-language-models-(llms)}
 % TODO too repetitive?
@@ -38,7 +39,6 @@ conversations.
 Currently, there are no binding guidelines on usage and prompting of such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
-
 \subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting?
 It is important to differentiate possible forms of prompting that exist in LLM interactions in order
 to be able to correctly analyze and assess prompts in later parts of this paper.
@@ -58,12 +58,45 @@ supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: ex
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
 To exemplify the learning capabilities, we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
-and recent online resources~\cite{dairai_few-shot_2023}:
-\textit{A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that uses the word whatpu is: We were traveling in Africa and we saw these very cute whatpus.}
-We leverage this example to \("\)prime\("\) ChatGPT and subsequently add the following prompt:
-\textit{\("\)A \("\)draya\("\) is an exotic fruit native to the jungle of South America and is often used for local desserts.
-An example of a sentence that uses the word draya is:\("\)}
-When we
+and recent online resources~\cite{dairai_few-shot_2023} using the current ChatGPT-3 model:
+
+
+\begin{table}
+    \centering
+    \caption{Odd Number Sum Evaluations}
+    \begin{tabularx}{\textwidth}{|X|X|}
+    \toprule
+    \textbf{User} & \textbf{Response} \\
+    Prompt: & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. \\
+    \textit{A: & The odd numbers in this group add up to an even number: 15, 5, 13, 7, and 1.
+    Their sum is 41, which is indeed an even number.} \\
+    \midrule
+    Prompt: & The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+    The answer is False. \\
+    & The odd numbers in this group add up to an even number: 17, 10, 19, 4, 8, 12, 24.
+    The answer is True. \\
+    & The odd numbers in this group add up to an even number: 16, 11, 14, 4, 8, 13, 24.
+    The answer is True. \\
+    & The odd numbers in this group add up to an even number: 17, 9, 10, 12, 13, 4, 2.
+    The answer is False. \\
+    & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+
+    \textit{A: & The answer is False.
+    The odd numbers in this group (15, 5, 13, 7, and 1) add up to 41, which is an odd number, not an even number.}\\
+    \bottomrule
+    \end{tabularx}
+    \label{tab:odd_number_sum}
+\end{table}
+
+This example prompt, we could recreate the effects observed by other researchers.
+Indeed, the request of the user is first wrongly answered by the model using a zero-shot
+approach.
+Only when relying on few-shot prompting, and supplying ChatGPT-3 with additional information,
+the model generates the correct answer.
+
+We should note however, that ChatGPT is a dedicated language model.
+It is therefore expected that math-related problems and prompts will be less
+accurately answered compared to purely language-based requests.
 
 
 Even though both approaches give direction to the model, they vary in the amount of information that

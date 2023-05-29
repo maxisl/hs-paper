@@ -42,7 +42,7 @@ BlenderBot 3~\cite{shuster_blenderbot_2022}.
 % Why are LLMs important for our work? How do they come into play?
 Large Language Models are a central part of our research as we investigate user behavior in LLM
 conversations.
-Currently, there are no binding guidelines on usage and prompting of such models,
+Currently, there are no binding guidelines on the concrete structure when prompting of such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,6 +57,7 @@ In regard to prompting, we refer to any form of prompt where the user does not s
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
 An example for such a query could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Few-Shot Learning}
@@ -97,6 +98,8 @@ the current ChatGPT-3 model in~\ref{tab:odd_number_sum}:
     \end{tabularx}
     \label{tab:odd_number_sum}
 \end{table}
+
+% TODO could also include example prompt with sentence completion, depending on space left
 
 Using this example prompt, we could recreate the effects observed by other researchers.
 We can observe that the request of the user is indeed first wrongly answered by the model

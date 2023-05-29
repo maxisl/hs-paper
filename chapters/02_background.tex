@@ -57,6 +57,9 @@ In regard to prompting, we refer to any form of prompt where the user does not s
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
 An example for such a query could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
+As expected, model performance was measured as inferior in zero-shot prompting settings compared
+to other settings where more information is provided in the prompt, such as a Few-Shot approach,
+which we describe in the following.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,6 +69,8 @@ It is generally aimed at providing good learning performance with only a few (mo
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
+Giving one demonstration in the prompt is commonly referred to as a \("\)One-Shot\("\) approach~\cite[p. 6]{brown_language_2020},
+whereas multiple make it \("\)Few-Shot\("\).
 To exemplify the learning capabilities, we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} which displays our interaction with
 the current ChatGPT-3 model in~\ref{tab:odd_number_sum}:

@@ -57,15 +57,13 @@ In regard to prompting, Zero-Shot refers to any form of prompt where the user do
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
 An example for such a query could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
-As expected, model performance was measured as inferior in zero-shot prompting settings compared
-to other settings where more information is provided in the prompt, such as a Few-Shot approach.
-% TODO cite
-
+As expected, model performance (accuracy) was measured as inferior in zero-shot prompting settings compared
+to other settings where more information is provided in the prompt, such as a Few-Shot approach~\cite[p. 5]{brown_language_2020}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Few-Shot Learning}
-In Few-Shot Learning in contrast, examples are provided, albeit not many.
-It is generally aimed at providing good learning performance with only a few (most often less than 20)
+In Few-Shot Learning in contrast, examples are given, albeit not many.
+It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
@@ -73,7 +71,7 @@ Giving one demonstration in the prompt is commonly referred to as a \("\)One-Sho
 whereas multiple make it \("\)Few-Shot\("\).
 To exemplify the learning capabilities, we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} which displays our interaction with
-the current ChatGPT-3 model in~\ref{tab:odd_number_sum}:
+the current ChatGPT-3 model in Table~\ref{tab:odd_number_sum}:
 
 % TODO fix table layout
 \begin{table}

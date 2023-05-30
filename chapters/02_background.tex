@@ -4,8 +4,8 @@
 
 This section provides an overview over fundamental concepts that are necessary to
 facilitate comprehensibility of all latter parts.
-We start with explaining Large Language Models in general, and then give more specific explanations
-for specific prompting approaches.
+We start with explaining Large Language Models in general, followed by more specific explanations
+of distinct prompting approaches.
 These explanations are followed by a more general overview of related work on the subject.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LLMs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,7 +33,7 @@ In future iterations, the Generative Pre-Training (GPT)~\cite{radford_improving_
 was adapted for text-based models in particular, laying the foundation for today's most
 popular conversational LLMs, such as ChatGPT\@.
 Since our research revolves around user interaction with dialog-focused models, we will not go into
-more detail about other application and development areas of LLMs.
+more detail about other application and development areas of LLMs from hereon.
 In addition to ChatGPT, there are also a variety of similar other models focused on text generation,
 such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022}, or
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
@@ -42,7 +42,7 @@ BlenderBot 3~\cite{shuster_blenderbot_2022}.
 % Why are LLMs important for our work? How do they come into play?
 Large Language Models are a central part of our research as we investigate user behavior in LLM
 conversations.
-Currently, there are no binding guidelines on the concrete structure when prompting of such models,
+Currently, there are no binding guidelines on the concrete structure when prompting such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,18 +53,18 @@ To do so, we will clarify the terms \("\)Zero-Shot-\("\) as well as \("\)Few-Sho
 Zero-Shot Learning has been described as \("\)[\ldots] learning how to recognise
 new concepts by just having a description of them\("\)\cite[p. 1]{feris_embarrassingly_2015}.
 
-In regard to prompting, we refer to any form of prompt where the user does not specify
+In regard to prompting, Zero-Shot refers to any form of prompt where the user does not specify
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
 An example for such a query could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
 As expected, model performance was measured as inferior in zero-shot prompting settings compared
-to other settings where more information is provided in the prompt, such as a Few-Shot approach,
-which we describe in the following.
+to other settings where more information is provided in the prompt, such as a Few-Shot approach.
+% TODO cite
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Few-Shot Learning}
-In Few-Shot Learning, examples are provided, albeit not many.
+In Few-Shot Learning in contrast, examples are provided, albeit not many.
 It is generally aimed at providing good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.

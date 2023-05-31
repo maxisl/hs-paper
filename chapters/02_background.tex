@@ -74,33 +74,38 @@ and recent online resources~\cite{dairai_few-shot_2023} which displays our inter
 the current ChatGPT-3 model in Table~\ref{tab:odd_number_sum}:
 
 % TODO fix table layout
-\begin{table}
-    \centering
-    \caption{Odd Number Sum Evaluations}
-    \begin{tabularx}{\textwidth}{|X|X|}
-    \toprule
-    \textbf{User} & \textbf{Response} \\
-    Prompt: & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. \\
-    \textit{A: & The odd numbers in this group add up to an even number: 15, 5, 13, 7, and 1.
-    Their sum is 41, which is indeed an even number.} \\
-    \midrule
-    Prompt: & The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
-    The answer is False. \\
-    & The odd numbers in this group add up to an even number: 17, 10, 19, 4, 8, 12, 24.
-    The answer is True. \\
-    & The odd numbers in this group add up to an even number: 16, 11, 14, 4, 8, 13, 24.
-    The answer is True. \\
-    & The odd numbers in this group add up to an even number: 17, 9, 10, 12, 13, 4, 2.
-    The answer is False. \\
-    & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+\documentclass[sigconf]{acmart}
 
-    \textit{A: & The answer is False.
-    The odd numbers in this group (15, 5, 13, 7, and 1) add up to 41, which is an odd number,
-        not an even number.}\\
-    \bottomrule
-    \end{tabularx}
-    \label{tab:odd_number_sum}
-\end{table}
+\begin{document}
+    \begin{table}
+        \centering
+        \caption{Odd Number Sum Evaluations}
+        \begin{tabular}{p{0.1\linewidth}p{0.9\linewidth}}
+            \toprule
+            Prompt: & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. \\ \\
+            \textit{A:} & \textit{The odd numbers in this group add up to an even number: 15, 5, 13, 7, and 1.
+            Their sum is 41, which is indeed an even number.}\\
+            \midrule
+            Prompt: & The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+            The answer is False. \\
+            & The odd numbers in this group add up to an even number: 17, 10, 19, 4, 8, 12, 24.
+            The answer is True. \\
+            & The odd numbers in this group add up to an even number: 16, 11, 14, 4, 8, 13, 24.
+            The answer is True. \\
+            & The odd numbers in this group add up to an even number: 17, 9, 10, 12, 13, 4, 2.
+            The answer is False. \\
+            & The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+            \\ \\
+            \textit{A:} & \textit{The answer is False.
+            The odd numbers in this group (15, 5, 13, 7, and 1) add up to 41, which is an odd number,
+            not an even number.}\\
+            \bottomrule
+        \end{tabular}
+        \label{tab:odd_number_sum}
+    \end{table}
+\end{document}
+
+
 
 % TODO could also include example prompt with sentence completion, depending on space left
 
@@ -121,7 +126,7 @@ will presumably improve performance and may therefore not have to rely on few-sh
 \subsection{User Interaction with LLMs}
 \label{subsec:user-interaction-with-llms}
 Since our work investigates user interactions with LLMs in more detail, we want to provide a more detailed
-overview over related work in this realm.
+overview of related work.
 
 \subsubsection{Effectiveness of Query Reformulation}
 % Paper: Analyzing and evaluating query reformulation strategies in web search logs

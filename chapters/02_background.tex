@@ -126,22 +126,37 @@ will presumably improve performance and may therefore not have to rely on few-sh
 \subsection{User Interaction with LLMs}
 \label{subsec:user-interaction-with-llms}
 The majority of existing related work focuses on strategies for designing prompts,
-challenges users may face in the course of doing so, as well as investigation of user behavior when
+challenges users may face in the course of doing so, as well as investigations of user behavior when
 performing search queries in general.
+These topics are of particular relevance for our work since we are not only interested in ways to
+improve prompt outputs, but end user behavior when doing so, too.
 
 
 \subsubsection{Effectiveness of Query Reformulation}
 % Paper: Analyzing and evaluating query reformulation strategies in web search logs
+% Provide a concise summary that highlights the key findings, methodologies used,
+% and any notable contributions.
+% Focus on the aspects that directly relate to your research or serve as a foundation for your work.
 Interest in query optimization in order to improve output is widely prevalent ever since the broad
 availability of large search engines, such as Google~\cite{google_google_2023} or Bing~\cite{microsoft_bing_2023}.
 Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior when reformulating search
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
-
-
-
-
+Even though their focus was on search queries alone, it was significant that there were improvements
+that could be seen after reformulating queries, concluding that
+\("\)Most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
+% TODO add another source? e.g. Query Reformulation Techniques for Web Search: A Comprehensive Survey
 
 \subsubsection{Few-Shot Learning Capabilities}
+% Paper: Language Models are Few-Shot Learners
+As indicated in the previous section, the learning setting of an LLM can significantly influence its
+performance.
+Related research by Brown et al\(.\)~\cite{brown_language_2020} for example has explored differences in model performance depending on examples provided as
+part of the LLM prompt~\cite{brown_language_2020}.
+To do so, they have conducted various experiments directly comparing zero-, one-, and few-shot learning.
+In conclusion, the trials revealed that LLMs indeed show remarkable performance in various areas,
+ranging from translation and question answering to reasoning tasks.
+Notably, few-shot learning models are able to adapt to new tasks with few training data.
+
 
 \subsubsection{Challenges in Non-expert Prompt Design}
 % Paper: Why Johnny can't Prompt...
@@ -153,11 +168,7 @@ queries, i.e.\ modifying a previous query in order to improve results, in as ear
 
 % What ideas are out there to improve prompt design?
 
-\subsubsection{Human - AI Co-Authoring}
-% TODO necessary or out of scope?
-% Paper: CoAuthor: Designing a Human-AI Collaborative Writing Dataset for Exploring Language Model Capabilities
-
-
-% provide more general overview of subject
-
-There
+% TODO Towards the end of the related work section, smoothly transition to your own research by
+% summarizing how it builds upon or extends the existing literature.
+% e.g. mention that query reformulation is of interest, since we will investigate how many users
+% have adapted prompts if results were not sufficient?

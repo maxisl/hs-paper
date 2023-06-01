@@ -137,26 +137,29 @@ improve prompt outputs, but end user behavior when doing so, too.
 % Provide a concise summary that highlights the key findings, methodologies used,
 % and any notable contributions.
 % Focus on the aspects that directly relate to your research or serve as a foundation for your work.
-Interest in query optimization in order to improve output is widely prevalent ever since the broad
+Interest in query optimization in order to improve outputs is widely prevalent ever since the broad
 availability of large search engines, such as Google~\cite{google_google_2023} or Bing~\cite{microsoft_bing_2023}.
 Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior when reformulating search
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
-Even though their focus was on search queries alone, it was significant that there were improvements
+Even though their focus was on search queries only, it was significant that there were improvements
 that could be seen after reformulating queries, concluding that
 \("\)Most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
+
+% TODO add more context: how does this conclusion relate to our research?
 % TODO add another source? e.g. Query Reformulation Techniques for Web Search: A Comprehensive Survey
 
 \subsubsection{Few-Shot Learning Capabilities}
 % Paper: Language Models are Few-Shot Learners
 As indicated in the previous section, the prompting setting of an LLM can significantly influence its
-performance.
-Related research by Brown et al\(.\)~\cite{brown_language_2020} for example has explored differences in model performance depending on examples provided as
-part of the LLM prompt~\cite{brown_language_2020}.
+performance in regard to the accuracy of outputs.
+In related research, Brown et al\(.\)~\cite{brown_language_2020} for example have explored differences
+in model performance depending on examples provided as part of the LLM prompt~\cite{brown_language_2020}.
 To do so, they have conducted various experiments directly comparing zero-, one-, and few-shot learning.
 In conclusion, the trials revealed that LLMs indeed show remarkable performance in various areas,
-ranging from translation and question answering to reasoning tasks.
-Notably, few-shot learning models are able to adapt to new tasks with few training data.
-It becomes clear that it is important to provide adequate, fitting examples as part of a prompt in order
+ranging from translation and question answering to reasoning tasks, particularly when relying on few-shot
+prompts.
+Notably, those few-shot learning models are able to adapt to new tasks with few training data only.
+It becomes apparent that it is important to provide adequate, fitting examples as part of a prompt in order
 to enhance model outcomes.
 
 \subsubsection{Challenges in Non-expert Prompt Design}

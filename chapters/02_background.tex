@@ -69,11 +69,14 @@ It is generally aimed at ensuring good learning performance with only a few (mos
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
-Giving one demonstration in the prompt is commonly referred to as a \("\)One-Shot\("\) approach~\cite[p. 6]{brown_language_2020},
-whereas multiple make it \("\)Few-Shot\("\).
-To exemplify the learning capabilities, we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
-and recent online resources~\cite{dairai_few-shot_2023} which displays our interaction with
-the current ChatGPT-3 model in Table~\ref{tab:odd_number_sum}:
+Solely giving one demonstration in the prompt is commonly referred to as a \("\)One-Shot\("\) approach~\cite[p. 6]{brown_language_2020},
+whereas multiple demonstrations make it \("\)Few-Shot\("\).
+To exemplify the differences in learning capabilities depending on the prompting setting,
+we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
+and recent online resources~\cite{dairai_few-shot_2023} in Table~\ref{tab:odd_number_sum}.
+The table displays an interaction we have carried out with the current ChatGPT-3 model, where we
+instructed the model to classify the sum of a sequence of numbers as either even or odd.
+
 
 \begin{table}
     \centering
@@ -106,7 +109,7 @@ the current ChatGPT-3 model in Table~\ref{tab:odd_number_sum}:
 % TODO could also include example prompt with sentence completion, depending on space left
 
 Using this example prompt, we could recreate the effects observed by other researchers.
-We can observe that the request of the user is indeed first wrongly answered by the model
+We can witness that the request of the user is indeed first wrongly answered by the model
 using a zero-shot approach.
 Only when relying on few-shot prompting and supplying ChatGPT-3 with additional information,
 the model generates the correct result.
@@ -122,14 +125,14 @@ will presumably improve performance and may therefore not have to rely on few-sh
 
 \subsection{User Interaction with LLMs}
 \label{subsec:user-interaction-with-llms}
-The majority of related work that exists focuses on strategies for designing prompts as well as
+The majority of existing related work focuses on strategies for designing prompts as well as
 challenges users may face in the course of doing so.
 
 \subsubsection{Effectiveness of Query Reformulation}
 % Paper: Analyzing and evaluating query reformulation strategies in web search logs
 Interest in query optimization in order to improve output exists ever since the availability of large search engines
 to billions of users.
-Huang and Efthimiadis~\cite{brown_language_2020} investigated query reformulation strategies in as early as 2009.
+Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated query reformulation strategies in as early as 2009.
 
 
 

@@ -77,7 +77,6 @@ and recent online resources~\cite{dairai_few-shot_2023} in Table~\ref{tab:odd_nu
 The table displays an interaction we have carried out with the current ChatGPT-3 model, where we
 instructed the model to classify the sum of a sequence of numbers as either even or odd.
 
-
 \begin{table}
     \centering
     \caption{Odd Number Sum Evaluations}
@@ -104,7 +103,6 @@ instructed the model to classify the sum of a sequence of numbers as either even
     \end{tabular}
     \label{tab:odd_number_sum}
 \end{table}
-
 
 % TODO could also include example prompt with sentence completion, depending on space left
 
@@ -143,7 +141,7 @@ Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior whe
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
 Even though their focus was on search queries only, it was significant that there were improvements
 that could be seen after reformulating queries, concluding that
-\("\)Most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
+\("\)most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
 
 % TODO add more context: how does this conclusion relate to our research?
 % TODO add another source? e.g. Query Reformulation Techniques for Web Search: A Comprehensive Survey
@@ -158,13 +156,23 @@ To do so, they have conducted various experiments directly comparing zero-, one-
 In conclusion, the trials revealed that LLMs indeed show remarkable performance in various areas,
 ranging from translation and question answering to reasoning tasks, particularly when relying on few-shot
 prompts.
-Notably, those few-shot learning models are able to adapt to new tasks with few training data only.
+Notably, those few-shot learning models are able to adapt to new tasks with little training data only.
 It becomes apparent that it is important to provide adequate, fitting examples as part of a prompt in order
 to enhance model outcomes.
 
 \subsubsection{Challenges in Non-expert Prompt Design}
 % Paper: Why Johnny can't Prompt...
 % What are the issues ordinary users currently face?
+Prompt design in general is still challenging for most users.
+Observations show that non-experts approach prompting rather opportunistic than
+strategic~\cite{zamfirescu-pereira_why_2023}.
+Trials with user revealed that two main reasons for these problems.
+First of all, non-experts showed over-generalization based on past, limited experiences,
+or single observations of success and failure of prompt changes which may not be universally
+transferable.
+Second, a false comprehension of AI systems as human-like.
+Participants in studies expected AI models to behave as in a human-to-human interaction, presuming a
+social understanding.
 
 \subsubsection{Opportunities and Challenges for Interactive Prompt Design Applications}
 % Paper: How to Prompt? Opportunities and Challenges of Zero- and Few-Shot Learning...

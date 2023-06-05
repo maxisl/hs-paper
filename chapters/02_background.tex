@@ -45,6 +45,8 @@ conversations.
 Currently, there are no binding guidelines on the concrete structure when prompting such models,
 and users are therefore completely unconfined in their way of interacting with them.
 
+% TODO include subsubsection "prompting" and explain the general concept?
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting instead of learning?
@@ -136,6 +138,8 @@ improve prompt outputs, but end user behavior when doing so, too.
 % Focus on the aspects that directly relate to your research or serve as a foundation for your work.
 Interest in query optimization in order to improve outputs is widely prevalent ever since the broad
 availability of large search engines, such as Google~\cite{google_google_2023} or Bing~\cite{microsoft_bing_2023}.
+Results of search query reformulations can be an indication to also look at prompt reformulation
+and its effectiveness in more detail.
 Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior when reformulating search
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
 Even though their focus was on search queries only, it was significant that there were improvements
@@ -193,21 +197,34 @@ They revealed two main reasons for these problems:
 A final aspect that highlights user difficulties in optimal prompt creation is the existing
 research aspiring to provide assisting tools that facilitate the whole design process end-to-end.
 As such, researchers have proposed guidelines for prompt design applications that assist
-users in prompt engineering~\cite{dang_how_2022}.
+users in prompt engineering by providing an adequate interface~\cite{dang_how_2022}.
 The motivation stems from the same realization that has already been discussed above: overall,
 LLM users struggle to communicate their expectations and intentions effectively to the model and
 commonly approach prompting as a trial and error process.
-Currently, there is no single design interface or definite guidelines, which would assist non-technical
-users in particular.
-Example propositions include detecting keywords in prompt formulation and allowing
+Currently, there is no single design interface or definite guidelines for prompts, which would
+assist non-technical users in particular.
+Example propositions to ease design include detecting keywords in prompt formulation and allowing
 edits of those via a dropdown menu, providing basic prompt-building blocks a user can select from,
-offering possibilities to combine multiple prompts, and storing certain prompts in a toolbar for
+offering possibilities to combine multiple prompts, and storing selected prompts in a toolbar for
 quick repeated execution.
 
 % TODO Towards the end of the related work section, smoothly transition to your own research by
 % summarizing how it builds upon or extends the existing literature.
 % e.g. mention that query reformulation is of interest, since we will investigate how many users
 % have adapted prompts if results were not sufficient?
+
+In summary, the volume of related research on the topic of user prompting behavior in LLM
+interactions shows the significance of the topic for effective use of this technology.
+Few definite guidelines exist, and users are largely left on their own when formulating prompts,
+especially non-technical users which may lack deep knowledge on the topic.
+Even though superior prompting strategies have been discovered, users do not consequently
+implement them, even if specifically instructed to do so due to confirmed habits and missing
+perception of LLMs as artificial and not human.
+Since related work suggests that reformulating search queries is a popular strategy to improve
+results, we want to investigate if users apply this strategy in LLM conversations as well.
+Furthermore, we want to discover if users still show a lack of awareness of effective prompt
+formulation strategies, such as few-shot learning, and if they comprehend the necessity of
+appropriate language that is machine and not human directed.
 
 
 

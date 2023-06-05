@@ -165,7 +165,8 @@ to enhance model outcomes.
 Designing effective prompts that are optimized to achieve the desired output is challenging for
 most users.
 Observations in user trials showed that non-experts approach prompting generally rather
-opportunistic than strategic~\cite{zamfirescu-pereira_why_2023}.
+opportunistic than strategic~\cite{zamfirescu-pereira_why_2023} and therefore have trouble
+adequately communicating their requests to the model.
 They revealed two main reasons for these problems:
 \begin{enumerate}
     \item First of all, non-experts suffered from over-generalization based on past, limited experiences,
@@ -181,16 +182,26 @@ They revealed two main reasons for these problems:
     They avoided consequently following general best practices in prompt design such as providing
     examples, and instead relied on instinct and literal commands, not realizing that prompts
     solely bias the model towards one direction.
+    In essence, users have to realize that they should not rely on their own understanding of
+    language, but instead consider how an LLM interprets the prompt.
 \end{enumerate}
 
 \subsubsection{Opportunities and Challenges for Interactive Prompt Design Applications}
 % Paper: How to Prompt? Opportunities and Challenges of Zero- and Few-Shot Learning...
 % "we propose four design goals for user interfaces that support prompting"
 % What ideas are out there to improve prompt design?
-A final aspect we want to highlight in the context of user interaction with LLMs are prompt
-design applications with the goal of assisting users in prompt engineering.
-
-
+A final aspect that highlights user difficulties in optimal prompt creation is the existing
+research aspiring to provide assisting tools that facilitate the whole design process end-to-end.
+As such, researchers have proposed guidelines for prompt design applications that assist
+users in prompt engineering~\cite{dang_how_2022}. % TODO check source
+The motivation stems from the same realization that has already been discussed above: overall,
+LLM users struggle to communicate their expectations and intentions effectively to the model and
+approach prompting as a trial and error process.
+Currently, there is no single design interface or definite guidelines, which would help non-technical
+users in particular.
+To do so, example propositions include detecting keywords in prompt formulation and allowing
+edits of those via a dropdown menu.
+providing hints during prompt formulation, autocompletion,
 
 % TODO Towards the end of the related work section, smoothly transition to your own research by
 % summarizing how it builds upon or extends the existing literature.

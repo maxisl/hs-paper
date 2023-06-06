@@ -188,6 +188,13 @@ They revealed two main reasons for these problems:
     solely bias the model towards one direction.
     In essence, users have to realize that they should not rely on their own understanding of
     language, but instead consider how an LLM interprets the prompt.
+    The example Zamfirescu et al\(.\) give in their research is the misconception of many users
+    that simply prompting a model not to say "XYZ" will not actually prevent the model from doing
+    so in any case.
+    It is still possible that the model will output "XYZ" in subsequent responses due to
+    the probabilistic nature of LLMs and the fact that even though responses can be primed
+    by earlier prompts in the conversation, they are generated ad-hoc based on the most relevant
+    training data of the model.
 \end{enumerate}
 
 \subsubsection{Opportunities and Challenges for Interactive Prompt Design Applications}

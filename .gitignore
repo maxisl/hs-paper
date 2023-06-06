@@ -322,6 +322,8 @@ samples/sample-*.pdf
 *.zip
 *.rpi
 *~
-samples/ACM-Reference-Format.bst
+ACM-Reference-Format.bst
 samples/*.tex
 
+.idea
+auxil

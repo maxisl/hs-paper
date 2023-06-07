@@ -39,11 +39,11 @@ such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022},
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
 
 
-% Why are LLMs important for our work? How do they come into play?
-Large Language Models are a central part of our research as we investigate user behavior in LLM
-conversations.
-Currently, there are no binding guidelines on the concrete structure when prompting such models,
-and users are therefore completely unconfined in their way of interacting with them.
+The primary method of interacting with LLMs is the previously mentioned approach of \("\)prompting\("\) the model.
+Currently, there are no binding guidelines on the concrete structure of prompts,
+and users are therefore completely unconfined in their way of interacting.
+In the following, we go into more detail about different types of prompts, namely zero- and few
+-shot.
 
 % TODO include subsubsection "prompting" and explain the general concept?
 
@@ -66,7 +66,8 @@ to other settings where more information is provided in the prompt, such as a Fe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Few-Shot Learning}
-In Few-Shot Learning in contrast, examples are given, albeit not many.
+In Few-Shot Learning in contrast, examples are given, albeit they do not necessarily have to be
+many.
 It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
@@ -109,7 +110,7 @@ instructed the model to classify the sum of a sequence of numbers as either even
 % TODO could also include example prompt with sentence completion, depending on space left
 
 Using this example prompt, we could recreate the effects observed by other researchers.
-We can witness that the request of the user is indeed first wrongly answered by the model
+We can witness that the user request is indeed first wrongly answered by the model
 using a zero-shot approach.
 Only when relying on few-shot prompting and supplying ChatGPT-3 with additional information,
 the model generates the correct result.
@@ -117,8 +118,9 @@ the model generates the correct result.
 We should note however, that ChatGPT is a dedicated language model, and we have used ChatGPT-3.
 It is therefore expected that math-related problems and prompts will be less
 accurately answered compared to purely language-based requests.
-Depending on the model training it is imaginable that future iterations, such as ChatGPT-4,
-will presumably improve performance and may therefore not have to rely on few-shot assistance as much.
+Depending on the model training and technological progress, it is imaginable that future
+iterations, such as ChatGPT-4, will presumably improve performance and may therefore not have to
+rely on few-shot assistance as much.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER INTERACTION WITH LLMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % / RELATED WORK
@@ -129,7 +131,7 @@ The majority of existing related work focuses on strategies for designing prompt
 challenges users may face in the course of doing so, as well as investigations of user behavior when
 performing search queries in general.
 These topics are of particular relevance for our work since we are not only interested in ways to
-improve prompt outputs, but end user behavior when doing so, too.
+improve prompt outputs, but also in end user behavior while prompting.
 
 \subsubsection{Effectiveness of Query Reformulation}
 % Paper: Analyzing and evaluating query reformulation strategies in web search logs
@@ -171,7 +173,7 @@ most users.
 Observations in user trials showed that non-experts approach prompting generally rather
 opportunistic than strategic~\cite{zamfirescu-pereira_why_2023} and therefore have trouble
 adequately communicating their requests to the model.
-They revealed two main reasons for these problems:
+The trials revealed two main reasons for these problems:
 \begin{enumerate}
     \item First of all, non-experts suffered from over-generalization based on past, limited experiences,
     or single observations of success and failure of prompt adjustments, which may not be universally
@@ -214,11 +216,7 @@ Example propositions to ease design include detecting keywords in prompt formula
 edits of those via a dropdown menu, providing basic prompt-building blocks a user can select from,
 offering possibilities to combine multiple prompts, and storing selected prompts in a toolbar for
 quick repeated execution.
-
-% TODO Towards the end of the related work section, smoothly transition to your own research by
-% summarizing how it builds upon or extends the existing literature.
-% e.g. mention that query reformulation is of interest, since we will investigate how many users
-% have adapted prompts if results were not sufficient?
+\newline
 
 In summary, the volume of related research on the topic of user prompting behavior in LLM
 interactions shows the significance of the topic for effective use of this technology.
@@ -226,15 +224,12 @@ Few definite guidelines exist, and users are largely left on their own when form
 especially non-technical users which may lack deep knowledge on the topic.
 Even though superior prompting strategies have been discovered, users do not consequently
 implement them, even if specifically instructed to do so.
-So far, these habits have been attributed to existing habits and missing perception of LLMs as
+So far, these behaviors have been attributed to existing habits and missing perception of LLMs as
 artificial and not human.
 Since related work suggests that reformulating search queries is a popular strategy to improve
 results, we want to investigate if users apply this strategy in LLM conversations as well by
-looking at real-world examples of LLM conversations.
+looking at real-world examples of LLM conversations. % TODO check if we really did this
 Furthermore, we want to discover if users still show a lack of awareness of effective prompt
 formulation strategies, such as few-shot learning, and if they rely on appropriate language that
 is machine and not human directed, i.e.\ showing comprehension of the fundamental difference
 between talking to a machine and a human.
-
-
-

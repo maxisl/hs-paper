@@ -23,14 +23,14 @@ around 30\%~\cite{statista_us_2022}.
 Large Language Models are mainly implemented in the form of text generating chatbots that can
 answer seemingly any question a user might pose.
 Although no expert knowledge is required to formulate a prompt and interact with an LLM-based bot, it is challenging to optimize the output, since it varies depending on the structure, wording,
-and composition of the user input. %TODO cite?
+and composition of the input. %TODO cite?
 Any form of model input, whether it is in the form of a task or a question, is commonly
 referred to as \("\)prompting\("\) the model.
 Due to the vast application possibilities and promising future developments of LLMs, exploration of
 user prompting behavior in interactions with such models is of particular interest.
 Plenty of research has been conducted in the field of user interactions with LLMs already,
 mainly in regard to query reformulation strategies, studies of common user errors when prompting,
-different prompt formulation strategies, and general LLM limitations.
+different prompt composition strategies, and general LLM limitations.
 
 %- The objectives of the work.
 In this paper, we are going to explain the fundamentals and workings of LLMs and prompting,
@@ -44,29 +44,23 @@ enhance model output.
 %- Guidance to the reader:
 % What should the reader watch for in the paper?
 % What are the interesting high points? What strategy did we use?
-Since the main part of this paper will be complimented by an analysis of real world examples, the
-reader can expect to gain a better understanding of actual user prompting behavior.
+Since the main part of this paper will be complemented by an analysis of real-world examples, the
+reader can expect to develop an enhanced comprehension of actual user prompting behavior.
 To obtain these insights, we will leverage input data mainly gathered from the website
-ShareGPT~\cite{sharegpt_sharegpt_2023}, % TODO cite
+ShareGPT~\cite{sharegpt_sharegpt_2023},
 which enables users to store conversations they have had with the ChatGPT model for later retrieval
 or sharing them publicly.
 
-%- Summary/conclusion:
-% What should the reader expect as conclusion?
-% TODO add points as paper progresses
-
 % TODO add links (\ref) to sections
 The paper is organized as follows.
-The introduction provides a general overview of the paper, introducing the topic and setting the context for all
-subsequent parts.
-The following related work section is divided into two subsections.
-We first focus on Large Language Models (LLMs) and cover general information about their
-workings, training data, text generation capabilities, real-world usage, and current limitations.
-Then, we explore user interaction with LLMs, explain the concept of prompting, and highlight
+This introduction is succeeded by a related work section that sets the context for all subsequent
+parts by first focusing on Large Language Models (LLMs) and covering general information about
+their workings, training data, text generation capabilities, real-world usage, and current limitations.
+We then explore user interactions with LLMs, explain the concept of prompting, and highlight
 various use cases as well as related research.
 
-The following section introduces our study, outlines our research objective, and
-describes the methodology and individual steps we take.
+The next section introduces the study by outlining the research objective and
+describing the methodology and individual steps that will be taken.
 It then focuses on the research method we use, as well as the ShareGPT and Midjourney platforms,
 which provide the input data for the study.
 
@@ -78,13 +72,13 @@ We then analyze observable trends in user behavior and data patterns.
 The following discussion section starts with a synthesis of our observations.
 We then go into more detail about the reasons why users interact with LLMs the way they do,
 offering reasoning and informed assumptions.
-Additionally, we explore possibilities for prompt improvement based on findings from related
+Additionally, we explore possibilities for prompt improvements based on findings from related
 research.
 
 In the outlook section, we provide a perspective on future developments, divided into an
 introduction of the concept of Auto-GPT as a possible future iteration of prompting, as well as an
 overview of prompt engineering as a newly emerging discipline in the technology sector.
 
-The final section of this paper contains a summary of the findings and associated discussions and
-explains how and in which way or form we could recognize findings from related research in our
-own input samples.
+The final section of this paper offers a consolidation of the findings and associated discussions,
+as well as a summary of how we could recognize findings from related research in our own input
+samples.

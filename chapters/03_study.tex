@@ -124,30 +124,57 @@ in \ref{table}.
     \caption{ShareGPT Prompt Analysis Categories}
     \begin{tabular}{@{}llll@{}}
         \toprule
-        Type & Length & Composition & Complexity \\ \midrule
-         & Information & Long (5 + Sent.) & Zero Shot \\
-         & Advice & Med (2 - 4 Sent.) & One Shot \\
-         & Clarification & Short (<= 1 Sent.) & Few Shot \\
+        Type & Intent & Length & Setting \\ \midrule
+        Question & Information & Long (5 + Sent.) & Zero Shot \\
+        Statement & Advice & Med (2 - 4 Sent.) & One Shot \\
+        Command & Clarification & Short (<= 1 Sent.) & Few Shot \\
+        Task-based & Opinion &  &  \\
+        & Suggestion &  &  \\
+        & Entertainment &  &  \\
+        & & & \\
         \toprule
-        Refinement & Opinion &  &  \\
-        Language & Suggestion &  &  \\
-        Clarity & Entertainment &  &  \\
-        Satisfaction & & & \\
-
         Engagement & Complexity & Refinement & Language \\ \midrule
         Single Turn & Simple & None & Formal \\
         Multi Turn & Intermediate & Once & Informal \\
         &  & Complex &  \\ \bottomrule
     \end{tabular}
+    \label{tab:table}
+\end{table}
+
+\begin{table}[]
+    \centering
+    \caption{Midjourney Prompt Analysis Categories}
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        Type & Length & Composition & Complexity \\ \midrule
+        Language & Long (12+ Words) & Keyword-Only & Simple \\
+        Image & Med (4-12 Words) & Sentence & Intermediate \\
+        & Short (1-3 Words) & Mix & Complex \\
+        \\
+        \toprule
+        Refinement & Language & Clarity & Satisfaction \\
+        \midrule
+        None & Formal & Clear & Satisfied \\
+        Variation & Informal & Ambiguous & Dissatisfied \\
+        Regeneration & & & Unclear \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:table2}
 \end{table}
 
 % TODO section or subsection?
 \section{Study Results}
 \label{sec:study-results}
 
-\subsection{}
+\subsection{Findings}
+\label{subsec:findings}
 % Listing of the results of the study, potentially segregated into categories that can be defined
 % in advance
+
+\subsection{Observable Trends}
+\label{subsec:observable-trends}
+% Objective analysis of results with a particular focus on observable trends in user behavior and
+% data patterns (including visualizations such as charts)
 
 % TODO make an own subsection on difficulties of ordinary users in understanding how LLMs interpret
 % natural language? in this subsec, we could focus on the example also displayed on midjourneys

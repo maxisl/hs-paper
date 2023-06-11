@@ -119,20 +119,23 @@ in \ref{table}.
 
 % set linewidth 0,2281875 for \begin{tabular}{p{0.1\linewidth}p{0.81275\linewidth}}
 \begin{table}[]
+    \centering
+    \caption{ShareGPT Prompt Analysis Categories}
     \begin{tabular}{@{}llll@{}}
         \toprule
-        Type & Intent & Prompt Length & Prompt Setting \\ \midrule
+        Type & Intent & Length & Setting \\ \midrule
         Question & Information & Long (5 + Sent.) & Zero Shot \\
         Statement & Advice & Med (2 - 4 Sent.) & One Shot \\
         Command & Clarification & Short (<= 1 Sent.) & Few Shot \\
         Task-based & Opinion &  &  \\
         & Suggestion &  &  \\
         & Entertainment &  &  \\
-        &  &  &  \\ \toprule
-        &  &  &  \\ \midrule
-        &  &  &  \\
-        &  &  &  \\
-        &  &  &  \\ \bottomrule
+        & & & \\
+        \toprule
+        Engagement & Complexity & Refinement & Language \\ \midrule
+        Single Turn & Simple & None & Formal \\
+        Multi Turn & Intermediate & Once & Informal \\
+        &  & Complex &  \\ \bottomrule
     \end{tabular}
 \end{table}
 

@@ -107,16 +107,36 @@ members as of today.
 \newline
 
 In order to verify observations and findings we have presented in~\ref{sec:background-and-related-work},
-we closely examine exemplary real-world user interaction samples in the following.
+we closely examined exemplary real-world user interaction samples in the following.
 By randomly choosing 50 conversations from the ShareGPT website as well as Midjourney's Discord
-channel, we obtain a representative sample of average user behavior in conversations and prompting.
-For both the ChatGPT and the Midjourney conversations, we have defined dedicated categories
-according to which each sample is classified.
+channel each, we obtain a representative sample of average user behavior in conversations and
+prompting for both text and image targeting prompts.
+We have defined dedicated categories according to which each sample is classified for the
+conversations in both ChatGPT and Midjourney.
+For the language-focused ChatGPT conversations, the categories including specific sub-categories assigned to each sample can be seen in \ref{table}.
+Similarly, the categories and sub-categories for image-focused prompts in Midjourney are listed
+in \ref{table}.
 
+% set linewidth 0,2281875 for \begin{tabular}{p{0.1\linewidth}p{0.81275\linewidth}}
+\begin{table}[]
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        Type & Intent & Prompt Length & Prompt Setting \\ \midrule
+        Question & Information & Long (5 + Sent.) & Zero Shot \\
+        Statement & Advice & Med (2 - 4 Sent.) & One Shot \\
+        Command & Clarification & Short (<= 1 Sent.) & Few Shot \\
+        Task-based & Opinion &  &  \\
+        & Suggestion &  &  \\
+        & Entertainment &  &  \\
+        &  &  &  \\ \toprule
+        &  &  &  \\ \midrule
+        &  &  &  \\
+        &  &  &  \\
+        &  &  &  \\ \bottomrule
+    \end{tabular}
+\end{table}
 
 % TODO section or subsection?
-
-
 \section{Study Results}
 \label{sec:study-results}
 

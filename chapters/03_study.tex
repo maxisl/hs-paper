@@ -118,6 +118,25 @@ For the language-focused ChatGPT conversations, the categories including specifi
 Similarly, the categories and sub-categories for image-focused prompts in Midjourney are listed
 in \ref{table}.
 
+For ShareGPT, we analyzed the type of the prompt since in theory any kind of prompt is possible,
+the user is solely constrained to use natural language in any shape or form.
+It was also of major interest what the user intended to achieve with their individual prompts,
+i.e. what they use the model for.
+Prompt length and setting refer to the amount of sentences in the user inputs, as well as if any
+examples were provided as part of the query.
+If the user prompted the model multiple times (at least twice) in the course of the conversation
+, we classified the interaction as multi turn, otherwise as single turn.
+The complexity of the prompt gives us an idea whether users leverage ChatGPT for simple tasks
+that may also be researched by using a search engine, or if they pose complex multi-level
+questions that are difficult to answer even for an expert.
+The level of refinement of the prompt tells us if users are generally content with the initial
+answer of the LLM, or if further elaboration is needed.
+Finally, we differentiated use of formal and informal language, as well as clear or ambiguous
+prompts.
+When a single conversation consisted of multiple prompts, we classified the conversation
+based on the category that appeared most frequently or, in some cases, as soon as a significant
+behavior was observed.
+
 % set linewidth 0,2281875 for \begin{tabular}{p{0.1\linewidth}p{0.81275\linewidth}}
 \begin{table}[]
     \centering
@@ -166,10 +185,12 @@ in \ref{table}.
 \section{Study Results}
 \label{sec:study-results}
 
+
 \subsection{Findings}
 \label{subsec:findings}
 % Listing of the results of the study, potentially segregated into categories that can be defined
 % in advance
+
 
 \subsection{Observable Trends}
 \label{subsec:observable-trends}

@@ -118,24 +118,35 @@ For the language-focused ChatGPT conversations, the categories including specifi
 Similarly, the categories and sub-categories for image-focused prompts in Midjourney are listed
 in \ref{table}.
 
-For ShareGPT, we analyzed the type of the prompt since in theory any kind of prompt is possible,
-the user is solely constrained to use natural language in any shape or form.
+For ShareGPT, we classified the type of the prompt since in theory any kind of prompt is possible,
+as users are solely constrained to natural language in any shape or form.
 It was also of major interest what the user intended to achieve with their individual prompts,
-i.e. what they use the model for.
-Prompt length and setting refer to the amount of sentences in the user inputs, as well as if any
+i.e.\ what they use the model for.
+Prompt length and setting refer to the number of sentences in the user inputs, as well as if any
 examples were provided as part of the query.
-If the user prompted the model multiple times (at least twice) in the course of the conversation
-, we classified the interaction as multi turn, otherwise as single turn.
-The complexity of the prompt gives us an idea whether users leverage ChatGPT for simple tasks
-that may also be researched by using a search engine, or if they pose complex multi-level
-questions that are difficult to answer even for an expert.
-The level of refinement of the prompt tells us if users are generally content with the initial
-answer of the LLM, or if further elaboration is needed.
-Finally, we differentiated use of formal and informal language, as well as clear or ambiguous
-prompts.
-When a single conversation consisted of multiple prompts, we classified the conversation
-based on the category that appeared most frequently or, in some cases, as soon as a significant
-behavior was observed.
+If the user prompted the model multiple times (at least twice) in the course of the conversation, we considered the interaction as multi turn, otherwise as single turn.
+The prompt's complexity gave us an idea whether users leverage ChatGPT for simple
+tasks, that they may otherwise quickly research by using a search engine, or if they pose complex
+questions that require expert-level knowledge.
+The refinement degree of the prompt revealed if users were generally content with the initial
+answer of the LLM, or if further elaboration was needed.
+Finally, we differentiated use of formal and informal language.
+When a single conversation consisted of multiple prompts, we classified based on the most
+frequently observed category or significant behavior.
+
+In a similar fashion, we classified Midjourney interactions.
+First of all, we differentiated image or pure language inputs.
+We then also looked at the length of the prompt, and whether it consisted solely of keywords, one
+or more sentences, or a mix of both.
+The complexity of the whole prompt was recorded, too.
+Midjourney always generates four versions of the desired image and offers users the
+possibility to either recreate variations or more detailed versions of one or more of the results,
+as well as re-execute the whole generation process.
+We therefore classified the prompt accordingly in the refinement category.
+Finally, we recorded the clarity of the prompt and user satisfaction based
+on the observed behavior.
+If a user created variations or more detailed versions of the result, we assumed they were
+generally satisfied, whereas if they regenerated the whole image, they were dissatisfied.
 
 % set linewidth 0,2281875 for \begin{tabular}{p{0.1\linewidth}p{0.81275\linewidth}}
 \begin{table}[]

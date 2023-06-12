@@ -89,8 +89,7 @@ encompass the desired mood, drawing style, or composition of the image being gen
 Notably, the Midjourney Bot does not understand grammar, sentence structure, or specific words like
 humans~\cite{}. % TODO cite
 Midjourney's developers actively encourage using fewer, but more precise and impactful words when
-prompting
-the model.
+prompting the model.
 For example, they suggest using \("\)gigantic\("\) instead of \("\)big\("\) in order to achieve
 better results. %TODO cite
 This recommendation stems from the fact that fewer words in a prompt intensify the influence each
@@ -197,28 +196,55 @@ Analogously, we assumed dissatisfaction if they regenerated the whole image.
 \label{sec:study-results}
 In the following section, we are going to break down the sample analysis results by category.
 The distribution of the sub-categories in the individual categories Prompt Type, Prompt
-Intent, Prompt Length, and Prompt Setting can be seen in Figure~\ref{fig:chatgpt-categories-1}.
+Intent, Prompt Length, and Prompt Setting can be seen in Figure~\ref{fig:chatgpt-categories-1},
+whereas Figure~\ref{fig:chatgpt-categories-2} shows the numbers for categories Engagement,
+Complexity, Refinement, and Language.
 In regard to prompt type, it became clear that the majority of users (54\%) use Chat-GPT for Task
 -based prompts, followed by questions (36\%), Commands (8\%), and sole Statements (2\%).
 The most observed intents behind prompts were information gain (42\%), asking for suggestions (34
 ), followed by entertainment (10\%) and advice (10\%).
 Only few users were asking for clarification on a subject matter (4).
 Interestingly, we did not observe any prompts where users actively asked the chatbot for its
-opinion (0\%).
+opinion (0\%), which we initially had estimated as an at least fairly widespread use case.
 Prompt length was very evenly distributed, and we could not make out a clear preference of users.
 Short (38\%), medium length (34\%), and long (28\%) prompts made up close to a third of our samples each.
 The prompting setting that was most often used was however clear.
-The vast majority of users relied on a zero shot approach (90), whereas only 8\% used a one shot,
+The vast majority of users relied on a zero shot approach (90\%), whereas only 8\% used a one shot,
 and a mere 2\% a few shot setting.
 Engagement in interactions was evenly distributed between Multi Turn (52) and Single Turn (48)
 conversations, meaning that almost half of the observed chats ended after the initial answer of
 the LLM\@.
 Most prompts were of a simple nature (48\%), and slightly more than a third (38\%) could be
 classified as intermediate, which left only (14\%) as complex.
-Users refined their prompts rarely multiple times (12\%) or once (22\%), which left a majority of
-two thirds (66\%) of never refined queries.
+ShareGPT users refined their prompts rarely multiple times (12\%) or once (22\%), which left a
+two thirds majority (66\%) of never refined queries.
 Finally, we could observe a tendency towards formal language (60\%), which was used more often
 than informal language (40\%).
+
+Similarly, we analyzed the Midjourney data samples according to the predefined categories.
+The corresponding data and distribution for the categories Prompt Type, Length, Composition, and
+Complexity can be seen in Figure~\ref{fig:midjourney-categories-1}, for the categories in Figure~\ref{fig:midjourney-categories-2}.
+We explained that Midjourney allows users to also prompt with an existing image as part of the
+input.
+However, only very few (8\%) users have made use of this feature in our data sample.
+The majority (92\%) relied on purely textual prompts.
+Interestingly, most queries were at least of medium length (54\%), or even long (38\%), and only 8
+could be classified as short.
+The composition of the individual prompts was well-balanced between sentences (42\%), only keywords
+(26\%), or a mix of both (32\%).
+The same applies for the complexity.
+Most prompts were on an intermediate level (40\%), closely followed by simple (38\%) and finally
+complex prompts with a share of only 22\%.
+In a similar fashion to our ChatGPT samples, we observed only few refinements of Midjourney prompts.
+Regenerations of images made up 14\%, variations 10\%, and the rest (76\%) was not refined at all.
+A clear distribution could be seen in regard to formality of language.
+Users relied on formal language in almost all cases (94\%), and only very rarely on more informally
+phrased prompts (6\%).
+We identified 92\% of all prompts as clear in their intention, which left only 8\% as ambiguous.
+Satisfaction of users was unfortunately often unclear (58\%), due to no apparent reactions of the
+users to the final image.
+However, for almost half of the samples we could either identify signs of satisfaction (26\%) or
+dissatisfaction (16\%).
 
 
 
@@ -233,6 +259,18 @@ than informal language (40\%).
     \includegraphics[width=0.475\textwidth]{images/charts2}
     \caption{ShareGPT Prompt Analysis Categories 5--8}
     \label{fig:chatgpt-categories-2}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.475\textwidth]{images/charts3}
+    \caption{Midjourney Prompt Analysis Categories 1--4}
+    \label{fig:midjourney-categories-1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.475\textwidth]{images/charts4}
+    \caption{Midjourney Prompt Analysis Categories 5--8}
+    \label{fig:midjourney-categories-2}
 \end{figure}
 
 \subsection{Findings}

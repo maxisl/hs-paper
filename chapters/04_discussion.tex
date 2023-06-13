@@ -82,6 +82,44 @@ There sometimes seems to be a lack of understanding that more information is not
 always better for quality of model outputs.
 This observation fits another that has been made before:
 Users struggle to formulate precise, effective, and therefore also short, concise prompts.
-We suggested better learning materials and guidance already to address this issue.
+We suggested better learning materials and guidance already as a measure to address this issue.
+Regarding composition of the Midjourney prompts, we suspect that this struggle is also the reason
+for the rare occurrence of a keywords-only prompts.
+Users seem to prefer natural language sentences or at least a mix of sentences and keywords
+instead of "encoding" their wants.
+To help, developers could offer reformulation engines, that only extract keywords (or create them)
+from input sentences.
+Since almost no images were regenerated as a reaction to the initial result of a prompt
+we had classified as complex, we conclude that Midjourney is able to handle difficult queries well.
+This assumption is confirmed by the fact that users did generally not refine their queries a lot
+after the initial result was shown by the engine.
+It was difficult to judge formality of language of users, but in general users tended to rely on
+formal language, which was probably also influenced by the keyword-focused nature of the prompts.
+We attribute the fact that most queries were formulated clearly to this circumstance as well,
+since keyword focused prompts are usually shorter and less complicated than NLP prompts.
 
 \subsubsection{Commonalities and Differences between ChatGPT and Midjourney}
+A clear distinction between ChatGPT and Midjourney prompts lies in the nature of the model and
+their designs.
+Whereas ChatGPT is trained on full sentence queries, Midjourney is keyword focused.
+However, we have remarked already that Midjourney users tend to at least partially integrate
+sentence structures in their prompts as well, which may be due to the fact that it seems more
+natural and is easier for users due to existing habits.
+Both models were prompted with language on the more formal side.
+It is possible, that this perception is skewed though, as prompts with informal language are
+either not shared in the case of ChatGPT, or are directly filtered before execution in the case
+of Midjourney.
+It is worth mentioning that we were able to observe a previously mentioned general misconception
+that researchers had observed in conversations of users with natural language LLMs such as
+ChatGPT already.
+Some users rely on negation when providing instructions and misunderstand that it will not
+prevent the model from producing the unwanted.
+Our data samples from Midjourney contain one example where the user provides an image of the
+fictional character Voldemort from the movie saga Harry Potter, and explicitly asks the model to
+generate an image of "voldemort dying without a nose".
+Since the sole existence of the word "nose" in the prompt primes the model towards including said
+object, all four result images indeed contain visualizations of the fictional character voldemort
+passing--but with a nose.
+Remarkably, there might have been a higher chance that voldemort does not possess a human looking
+nose in the final image, if the user did not explicitly mention the word, as Voldemort does not
+do so in the movie.

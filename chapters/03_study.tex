@@ -1,17 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STUDY ON USAGE PATTERNS OF LLM USERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Study on Usage Patterns of LLM Users}
 \label{sec:study-on-usage-patterns-of-llm-users}
-
+The following section contains the study part of our research.
+We first state the objective of our study and then explain the individual steps that will be
+taken to obtain sufficient results.
+Finally, we present said results and provide insights based on the collected data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESEARCH OBJECTIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Research Objective}
 \label{subsec:research-objective}
 % Intro and Research Objective of the study goal, the methodology, and the individual
 % steps that will be taken
 The main outlined goal of our research is to gain a fundamental understanding of user behavior in conversation with Large Language Models.
-This analysis includes identifying common patterns and strategies in those interactions.
+Our analysis aims to identify common patterns and strategies in those interactions.
 Previous research indicates that users regularly face challenges and difficulties, especially
 when trying to formulate effective prompts.
-Through accumulation and analysis of qualified data samples we aim to identify and understand these
+Through accumulation and analysis of qualified data samples, we aim to identify and understand these
 challenges,
 as well as investigate the impact and effect of user behavior on the effectiveness of LLM responses.
 Given the various kinds of available generative models, we want to examine differences in
@@ -22,8 +25,7 @@ results, we want to investigate if users apply this strategy in LLM conversation
 % check if we really did this
 Furthermore, we want to assess the extent to which users show awareness of effective prompt
 formulation strategies, such as few-shot learning, and whether they rely on appropriate language
-that is machine and not human directed, thus showing comprehension of the fundamental difference
-between talking to a machine versus a human.
+that is machine and not human directed, thus showing comprehension that they are talking to an AI\@.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESEARCH METHOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Research Method: ShareGPT and Midjourney}
@@ -35,7 +37,7 @@ Our study analyzes data samples from two different types of
 LLMs.
 First, we examine user interactions with ChatGPT, a generative NLP model, which has already been
 described in more detail in Section~\ref{subsec:large-language-models-(llms)}.
-These ChatGPT conversations were obtained from the website ShareGPT\cite{sharegpt_sharegpt_2023}.
+These ChatGPT conversations were obtained from the website ShareGPT \cite{sharegpt_sharegpt_2023}.
 ShareGPT is an open platform, that allows its community to publicly share interactions they have
 had with the ChatGPT model.
 As of today, ShareGPT has accumulated nearly 300.000 saved user conversations.
@@ -45,13 +47,14 @@ gain a deeper understanding of the conversation dynamics and outcome.
 \newline
 
 Midjourney in contrast, is a platform that focuses on AI-based image generation.
-Users can interact with the model through Discord\cite{discord_discord_2023} and submit individual requests.
+Users can interact with the model through Discord \cite{discord_discord_2023} and submit
+individual requests.
 In order to generate an illustration, users have to enter a descriptive prompt, similar to
 ChatGPT\@.
 The description typically includes everything that should appear in the picture, but may also
 encompass the desired mood, drawing style, or composition of the image being generated.
 Notably, the Midjourney Bot does not understand grammar, sentence structure, or specific words like
-humans~\cite{midjourney_documentation_2023}.
+humans do~\cite{midjourney_documentation_2023}.
 Midjourney's developers actively encourage using fewer, but more precise and impactful words when
 prompting the model.
 For example, they suggest using \("\)gigantic\("\) instead of \("\)big\("\) in order to achieve
@@ -62,7 +65,7 @@ However, it is important to mention that users have to strike a balance.
 An adequate amount of precise words is mandatory, because anything that is not specified may be
 randomized.
 In addition to purely textual prompts, the platform allows image inputs as well.
-Users may provide an image as a guideline or basis including instructions about things to modify,
+Users may provide an image as a guideline or basis and include instructions about things to modify,
 add, remove, or remodel.
 The Midjourney platform on Discord has experienced rapid growth, and counts more than 17 million
 members as of today.
@@ -73,7 +76,7 @@ we examine exemplary real-world user interaction samples in the following.
 By randomly choosing 50 conversations from each ShareGPT's website as well as Midjourney's Discord
 channel, we obtain a representative sample of average user behavior in both text and image targeting prompts.
 We have defined dedicated categories according to which each sample is classified for both
-the ChatGPT and Midjourney conversations.
+ChatGPT and Midjourney.
 For the language-focused ChatGPT conversations, the categories and specific sub-categories can be
 seen in Table~\ref{tab:sharegpt-prompt-analysis-categories}.
 Similarly, the categories and sub-categories for image-focused Midjourney prompts are listed
@@ -81,13 +84,13 @@ in Table~\ref{tab:midjourney-prompt-analysis-categories}.
 
 For ShareGPT, we first of all classified the prompt by type, as in theory any kind of prompt is
 possible, because users are solely constrained to natural language in any shape or form.
-In the next category, it was of major interest what the user intended to achieve with their
+In the next category, it was mainly of interest what the user intended to achieve with their
 individual prompts,
 i.e.\ what they use the model for.
 The categories prompt length and setting refer to the number of sentences in the user inputs, and
 whether any examples were provided as part of the query.
 Engagement refers to the amount of exchange in the interaction.
-If the user prompted the model multiple times(at least twice) during the course of the
+If the user prompted the model multiple times (at least twice) during the course of the
 conversation, we considered the interaction multi turn, otherwise single turn.
 The prompt's complexity gave us an idea whether users leverage ChatGPT for simple
 tasks, that they may otherwise quickly research using a search engine, or if they pose complex
@@ -132,7 +135,8 @@ Analogously, we assumed dissatisfaction if they regenerated the whole image.
         Engagement  & Complexity    & Refinement         & Language  \\ \midrule
         Single Turn & Simple        & None               & Formal    \\
         Multi Turn  & Intermediate  & Once               & Informal  \\
-        &               & Complex            &           \\ \bottomrule
+        &               & Multiple            &           \\ \\
+        \bottomrule
     \end{tabular}
     \label{tab:sharegpt-prompt-analysis-categories}
 \end{table}
@@ -152,7 +156,7 @@ Analogously, we assumed dissatisfaction if they regenerated the whole image.
         \midrule
         None & Formal & Clear & Satisfied \\
         Variation          & Informal & Ambiguous & Dissatisfied \\
-        Regeneration & & & Unclear \\
+        Regeneration & & & Unclear \\\\
         \bottomrule
     \end{tabular}
     \label{tab:midjourney-prompt-analysis-categories}
@@ -205,7 +209,7 @@ were classified as short.
 The composition of the individual prompts was well-balanced between sentences (42\%), only keywords
 (26\%), or a mix of both (32\%).
 The same applies for the complexity.
-Most prompts were on an intermediate level (40\%), closely followed by simple (38\%) and finally
+Most prompts were on an intermediate level (40\%), closely followed by simple (38\%), and finally
 complex prompts with a share of only 22\%.
 Similarly to our ChatGPT samples, we observed only few refinements of Midjourney prompts.
 More detailed regenerations of images made up 14\%, variations 10\%, and the rest (76\%) was not

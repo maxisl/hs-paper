@@ -2,44 +2,7 @@
 \section{Study on Usage Patterns of LLM Users}
 \label{sec:study-on-usage-patterns-of-llm-users}
 
-% Ideas for language prompt coding categories:
-%- Prompt type: could include questions, statements, commands, or specific task-based prompts
-%- User intent: could include seeking information, asking for advice, requesting clarification,
-% expressing opinions, or making suggestions
-%- Response quality: might include accurate and helpful responses, incomplete or ambiguous
-% responses, irrelevant responses, or responses requiring further clarification
-%- User satisfaction: could include satisfied, dissatisfied, neutral, confused, or impressed
-%- Engagement level: might include active conversation, single-turn interactions, probing for
-% more information, or exploratory questioning
-%- Task success: could include successful completion, partial success, or failure
-%- Response length
-%- Ethical considerations: might include potential biases in the generated responses, adherence
-% to ethical guidelines, or fairness and inclusivity in the LLM's behavior
-
-% % Ideas for image prompt coding categories:
-% Prompt type: capture the types of inputs users provide to the image generation models
-% User intent: Extend the user intent category to encompass image-related intents--could
-% include users requesting image generation, describing desired visual characteristics, or
-% seeking specific visual outcomes.
-% Response quality: evaluate the quality of the generated images--consider aspects such as visual
-% fidelity, realism, relevance to the user's request, or adherence to given guidelines.
-% User satisfaction: not possible? maybe on discord (but hard to discern)
-% Engagement level: might involve exploring how users refine their requests, provide feedback on
-% generated images, or iteratively interact with the model to achieve their desired visual
-% outcomes. (hard to discern, same as above)
-% Task success: might include successful image generation, partially successful
-% results, or cases where the model failed to meet the user's expectations.
-% Ethical considerations: could involve examining issues such as biases in generated images,
-% ethical implications of content creation, privacy concerns related to user-provided images, or
-% responsible use of image generation models.
-
-% analysis: do we see differences between text and image prompts? which is more successful /
-% accurate in general? do we observe sentiment differences?
-
-% Analyze distribution of zero-, one-, and few-shot prompts
-% analyze frequency of prompt reformulations in order to improve results
-%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESEARCH OBJECTIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Research Objective}
 \label{subsec:research-objective}
 % Intro and Research Objective of the study goal, the methodology, and the individual
@@ -62,6 +25,7 @@ formulation strategies, such as few-shot learning, and whether they rely on appr
 that is machine and not human directed, thus showing comprehension of the fundamental difference
 between talking to a machine versus a human.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RESEARCH METHOD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Research Method: ShareGPT and Midjourney}
 \label{subsec:research-method:-sharegpt-and-midjourney}
 % Information on the ShareGPT & Midjourney platforms, their user base, suitability for the
@@ -112,33 +76,36 @@ We have defined dedicated categories according to which each sample is classifie
 the ChatGPT and Midjourney conversations.
 For the language-focused ChatGPT conversations, the categories and specific sub-categories can be
 seen in Table~\ref{tab:sharegpt-prompt-analysis-categories}.
-Similarly, the categories and sub-categories for image-focused prompts in Midjourney are listed
+Similarly, the categories and sub-categories for image-focused Midjourney prompts are listed
 in Table~\ref{tab:midjourney-prompt-analysis-categories}.
 
-For ShareGPT, we classified the prompt by type since in theory any kind of prompt is possible,
-as users are solely constrained to natural language in any shape or form.
-It was also of major interest what the user intended to achieve with their individual prompts,
+For ShareGPT, we first of all classified the prompt by type, as in theory any kind of prompt is
+possible, because users are solely constrained to natural language in any shape or form.
+In the next category, it was of major interest what the user intended to achieve with their
+individual prompts,
 i.e.\ what they use the model for.
-Prompt length and setting refer to the number of sentences in the user inputs, and whether
-any examples were provided as part of the query.
-If the user prompted the model multiple times (at least twice) in the course of the conversation, we considered the interaction multi turn, otherwise single turn.
+The categories prompt length and setting refer to the number of sentences in the user inputs, and
+whether any examples were provided as part of the query.
+Engagement refers to the amount of exchange in the interaction.
+If the user prompted the model multiple times(at least twice) during the course of the
+conversation, we considered the interaction multi turn, otherwise single turn.
 The prompt's complexity gave us an idea whether users leverage ChatGPT for simple
 tasks, that they may otherwise quickly research using a search engine, or if they pose complex
 questions that require expert-level knowledge.
 The refinement degree of the prompt revealed if users were generally content with the initial
 answer of the LLM, or if further elaboration was needed.
 Finally, we differentiated use of formal and informal language.
-When a single conversation consisted of multiple prompts, we classified based on the most
-frequently observed category or significant behavior.
+In general, when a single conversation consisted of multiple prompts, we labeled it based on the
+most frequently observed category or significant behavior.
 
 We classified Midjourney interactions using a similar approach.
 First of all, we differentiated between image- and purely language-based inputs.
 We then considered the length of the prompt, and whether it consisted solely of keywords, one
-or more sentences, or a mix.
+or more sentences, or a mix of both.
 Next, we recorded the complexity of the whole prompt.
 The Midjourney bot always generates four versions of the desired image.
 It then allows users to either recreate variations or more detailed versions of one or more of
-the those four results.
+those four results.
 Users can also re-execute the whole generation process.
 We thus classified the prompt accordingly in the refinement category.
 Finally, we recorded the clarity of the prompt and satisfaction levels based
@@ -191,52 +158,59 @@ Analogously, we assumed dissatisfaction if they regenerated the whole image.
     \label{tab:midjourney-prompt-analysis-categories}
 \end{table}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STUDY RESULTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Study Results}
 \label{sec:study-results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FINDINGS AND OBSERVABLE TRENDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Findings and Observable Trends}
+\label{subsec:findings-and-observable-trends}
+% Listing of the results of the study, potentially segregated into categories that can be defined
+% in advance
 In the following section, we are going to break down the sample analysis results by category.
 The distribution of the sub-categories in the individual categories Prompt Type, Prompt
 Intent, Prompt Length, and Prompt Setting can be seen in Figure~\ref{fig:chatgpt-categories-1},
-whereas Figure~\ref{fig:chatgpt-categories-2} shows the numbers for categories Engagement,
+whereas Figure~\ref{fig:chatgpt-categories-2} shows the numbers for the categories Engagement,
 Complexity, Refinement, and Language.
-In regard to prompt type, it became clear that the majority of users (54\%) use Chat-GPT for Task
--based prompts, followed by questions (36\%), Commands (8\%), and sole Statements (2\%).
-The most observed intents behind prompts were information gain (42\%), asking for suggestions (34
-), followed by entertainment (10\%) and advice (10\%).
-Only few users were asking for clarification on a subject matter (4).
+In regard to prompt type, it became clear that the majority of users (54\%) use Chat-GPT for task -based prompts, followed by questions (36\%), commands (8\%), and statements (2\%).
+The most observed intents behind prompts were information gain (42\%) and asking for suggestions (34\%), followed by entertainment (10\%) and advice (10\%).
+Only few users were asking for clarification on a subject matter (4\%).
 Interestingly, we did not observe any prompts where users actively asked the chatbot for its
-opinion (0\%), which we initially had estimated as an at least fairly widespread use case.
+opinion (0\%), which we initially had estimated as an at least fairly common use case.
 Prompt length was very evenly distributed, and we could not make out a clear preference of users.
-Short (38\%), medium length (34\%), and long (28\%) prompts made up close to a third of our samples each.
-The prompting setting that was most often used was however clear.
+Short (38\%), medium length (34\%), and long (28\%) prompts made up about a third of our samples
+each.
+We could clearly see the most often used prompting setting, however.
 The vast majority of users relied on a zero shot approach (90\%), whereas only 8\% used a one shot,
 and a mere 2\% a few shot setting.
-Engagement in interactions was evenly distributed between Multi Turn (52) and Single Turn (48)
+Engagement in interactions was evenly distributed between multi turn (52\%) and single turn (48\%)
 conversations, meaning that almost half of the observed chats ended after the initial answer of
 the LLM\@.
 Most prompts were of a simple nature (48\%), and slightly more than a third (38\%) could be
-classified as intermediate, which left only (14\%) as complex.
-ShareGPT users refined their prompts rarely multiple times (12\%) or once (22\%), which left a
-two thirds majority (66\%) of never refined queries.
+classified as intermediate, which left only 14\% as complex.
+ShareGPT users only rarely refined their prompts multiple times (12\%) or once (22\%),
+leaving a two thirds majority (66\%) of never refined queries.
 Finally, we could observe a tendency towards formal language (60\%), which was used more often
 than informal language (40\%).
 
 Similarly, we analyzed the Midjourney data samples according to the predefined categories.
 The corresponding data and distribution for the categories Prompt Type, Length, Composition, and
-Complexity can be seen in Figure~\ref{fig:midjourney-categories-1}, for the categories in Figure~\ref{fig:midjourney-categories-2}.
-We explained that Midjourney allows users to also prompt with an existing image as part of the
-input.
+Complexity can be seen in Figure~\ref{fig:midjourney-categories-1}, for the categories Refinement, Language, Clarity, and Satisfaction in Figure~\ref{fig:midjourney-categories-2}.
+We already explained that Midjourney allows users to also prompt with an existing image as part of
+the input.
 However, only very few (8\%) users have made use of this feature in our data sample.
 The majority (92\%) relied on purely textual prompts.
-Interestingly, most queries were at least of medium length (54\%), or even long (38\%), and only 8
-could be classified as short.
+Interestingly, most queries were at least of medium length (54\%), or even long (38\%), and only 8\%
+were classified as short.
 The composition of the individual prompts was well-balanced between sentences (42\%), only keywords
 (26\%), or a mix of both (32\%).
 The same applies for the complexity.
 Most prompts were on an intermediate level (40\%), closely followed by simple (38\%) and finally
 complex prompts with a share of only 22\%.
-In a similar fashion to our ChatGPT samples, we observed only few refinements of Midjourney prompts.
-Regenerations of images made up 14\%, variations 10\%, and the rest (76\%) was not refined at all.
+Similarly to our ChatGPT samples, we observed only few refinements of Midjourney prompts.
+More detailed regenerations of images made up 14\%, variations 10\%, and the rest (76\%) was not
+refined
+at all.
 A clear distribution could be seen in regard to formality of language.
 Users relied on formal language in almost all cases (94\%), and only very rarely on more informally
 phrased prompts (6\%).
@@ -245,8 +219,6 @@ Satisfaction of users was unfortunately often unclear (58\%), due to no apparent
 users to the final image.
 However, for almost half of the samples we could either identify signs of satisfaction (26\%) or
 dissatisfaction (16\%).
-
-
 
 \begin{figure}
     \centering
@@ -272,16 +244,6 @@ dissatisfaction (16\%).
     \caption{Midjourney Prompt Analysis Categories 5--8}
     \label{fig:midjourney-categories-2}
 \end{figure}
-
-\subsection{Findings}
-\label{subsec:findings}
-% Listing of the results of the study, potentially segregated into categories that can be defined
-% in advance
-
-\subsection{Observable Trends}
-\label{subsec:observable-trends}
-% Objective analysis of results with a particular focus on observable trends in user behavior and
-% data patterns (including visualizations such as charts)
 
 % TODO make an own subsection on difficulties of ordinary users in understanding how LLMs interpret
 % natural language? in this subsec, we could focus on the example also displayed on midjourneys

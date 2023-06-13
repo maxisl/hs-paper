@@ -12,8 +12,8 @@ These explanations are followed by a more general overview of related work on th
 
 \subsection{Large Language Models (LLMs)}
 \label{subsec:large-language-models-(llms)}
-% TODO too repetitive?
-One of the most widely used applications areas of generative AI are Large Language Models (LLMs).
+We have mentioned before that one of the most popular application areas of generative AI
+are Large Language Models (LLMs).
 Among LLMs, the most widely adopted is ChatGPT~\cite{openai_chatgpt_2023}, which is a
 conversational model being developed by OpenAI\@.
 The model is currently publicly accessible and free of charge.
@@ -31,9 +31,9 @@ Large Language Models are a recent advancement that followed the development of 
 transformer architecture, which is a deep learning approach first introduced by researchers in 2017~\cite{vaswani_attention_2017}.
 In future iterations, the Generative Pre-Training (GPT)~\cite{radford_improving_2018} approach
 was adapted for text-based models in particular, laying the foundation for today's most
-popular conversational LLMs, such as ChatGPT\@.
+popular conversational LLMs.
 Since our research revolves around user interaction with dialog-focused models, we will not go into
-more detail about other application and development areas of LLMs from hereon.
+more detail about other LLM application and development areas.
 In addition to ChatGPT, there are also a variety of similar other models focused on text generation,
 such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022}, or
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
@@ -41,9 +41,9 @@ BlenderBot 3~\cite{shuster_blenderbot_2022}.
 
 The primary method of interacting with LLMs is the previously mentioned approach of \("\)prompting\("\) the model.
 Currently, there are no binding guidelines on the concrete structure of prompts,
-and users are therefore completely unconfined in their way of interacting.
-In the following, we go into more detail about different types of prompts, namely zero- and few
--shot.
+and users are therefore completely unconfined in their way of use.
+In the following, we go into more detail about different types of prompts, namely zero-, one-, and
+few-shot.
 
 % TODO include subsubsection "prompting" and explain the general concept?
 
@@ -52,16 +52,15 @@ In the following, we go into more detail about different types of prompts, namel
 \subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting instead of learning?
 It is important to differentiate possible forms of prompting that exist in LLM interactions in order
 to be able to correctly analyze and assess prompts in later parts of this paper.
-To do so, we will clarify the terms \("\)Zero-Shot-\("\) as well as \("\)Few-Shot Learning\("\).
+To do so, we will clarify the terms \("\)Zero-Shot-\("\) and \("\)Few-Shot Learning\("\).
 Zero-Shot Learning has been described as \("\)[\ldots] learning how to recognise
 new concepts by just having a description of them\("\)\cite[p. 1]{feris_embarrassingly_2015}.
-
-In regard to prompting, Zero-Shot refers to any form of prompt where the user does not specify
+In regard to prompting, zero-shot refers to any form of prompt where the user does not specify
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
-An example for such a query could be \("\)Give me five examples of papers that deal with the topic
+An example for such a prompt could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
 As expected, model performance (accuracy) was measured as inferior in zero-shot prompting settings compared
-to other settings where more information is provided in the prompt, such as a Few-Shot approach~\cite[p. 5]{brown_language_2020}.
+to other settings where more information is provided in the prompt, such as a few-shot approach~\cite[p. 5]{brown_language_2020}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -70,15 +69,15 @@ In Few-Shot Learning in contrast, examples are given, albeit they do not necessa
 many.
 It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
-In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
+In a few-shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
 Solely giving one demonstration in the prompt is commonly referred to as a \("\)One-Shot\("\) approach~\cite[p. 6]{brown_language_2020},
 whereas multiple demonstrations make it \("\)Few-Shot\("\).
 To exemplify the differences in learning capabilities depending on the prompting setting,
 we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} in Table~\ref{tab:odd_number_sum}.
-The table displays an interaction we have carried out with the current ChatGPT-3 model, where we
-instructed the model to classify the sum of a sequence of numbers as either even or odd.
+The table displays an interaction we have carried out with the current ChatGPT-3 model.
+We instructed the model to classify the sum of a sequence of numbers as either even or odd.
 
 \begin{table}
     \centering
@@ -119,7 +118,7 @@ We should note however, that ChatGPT is a dedicated language model, and we have 
 It is therefore expected that math-related problems and prompts will be less
 accurately answered compared to purely language-based requests.
 Depending on the model training and technological progress, it is imaginable that future
-iterations, such as ChatGPT-4, will presumably improve performance and may therefore not have to
+iterations, such as ChatGPT-4, will improve performance and may therefore not have to
 rely on few-shot assistance as much.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER INTERACTION WITH LLMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -144,8 +143,8 @@ Results of search query reformulations can be an indication to also look at prom
 and its effectiveness in more detail.
 Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior when reformulating search
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
-Even though their focus was on search queries only, it was significant that there were improvements
-that could be seen after reformulating queries, concluding that
+Even though their focus was on search queries only, it was significant that they identified
+measurable improvements after reformulating queries, concluding that
 \("\)most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
 
 % TODO add more context: how does this conclusion relate to our research?
@@ -155,7 +154,7 @@ that could be seen after reformulating queries, concluding that
 % Paper: Language Models are Few-Shot Learners
 As indicated in the previous section, the prompting setting of an LLM can significantly influence its
 performance in regard to the accuracy of outputs.
-In related research, Brown et al\(.\)~\cite{brown_language_2020} for example have explored differences
+Brown et al\(.\) have explored differences
 in model performance depending on examples provided as part of the LLM prompt~\cite{brown_language_2020}.
 To do so, they have conducted various experiments directly comparing zero-, one-, and few-shot learning.
 In conclusion, the trials revealed that LLMs indeed show remarkable performance in various areas,

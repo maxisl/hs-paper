@@ -2,6 +2,10 @@
 % SELBST: tikz for drawing
 \usepackage{tikz}
 \usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{pgf-pie}
 
 
 %% The first command in your LaTeX source must be the \documentclass command.
@@ -39,12 +43,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRACT
 
 \begin{abstract}
-  Artificial Intelligence (AI) plays an increasingly important role in the daily lives of millions of people.
-  Large Language Models (LLMs) are the most prominent implementation of AI that is used not only by experts, but equally by ordinary users as well.
-  LLMs can respond to any textual input (prompts) with human-like answers, leveraging the training data that was used to implement the model.
-  Even though prompting LLMs seems very straightforward, the question arises if it is possible to streamline the interactions with said models in order to optimize outputs.
-  We explore the behavior of a randomized trial of 100 interactions of users with LLMs that are publicly available on ShareGPT\@.
-  The goal of this investigation is the discovery of recurring patterns in behavior and the evaluation of human tendencies as well as biases of users when interacting with AI models in order to understand current behaviors and propose optimization opportunities.
+  \sloppy
+  Artificial Intelligence (AI) plays an increasingly important role in the daily lives of
+  millions of people.
+  Large Language Models (LLMs) are one of the most prominent implementations of AI that are used
+  not only by experts, but equally by ordinary users as well.
+  LLMs can respond to any textual input (prompts) with human-like answers, leveraging the
+  training data that was used to implement the model.
+  Even though prompting LLMs may seem very straightforward, the question arises if it is possible
+  to streamline the interactions with said models in order to optimize outputs.
+  We investigate user behavior in interactions with LLMs based on a randomized trial of 100
+  samples that are publicly available on the platforms ShareGPT and Midjourney.
+  The goal of this analysis is the discovery of recurring patterns as well as the
+  evaluation of human tendencies and biases when interacting with AI models in
+  order to understand prevalent behaviors and explore optimization opportunities.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CCS CONCEPTS
@@ -72,8 +84,8 @@
 \end{CCSXML}
 
 \ccsdesc[500]{Human-centered computing~Interaction design}
-\ccsdesc[300]{Information systems~Information retrieval}
-\ccsdesc[300]{Computing methodologies~Natural language processing}
+\ccsdesc[300]{Infor-mation systems~Information retrieval}
+\ccsdesc[300]{Computing methodo-logies~Natural language processing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KEYWORDS
 
@@ -84,61 +96,27 @@
 \maketitle
 
 
-% 1. Introduction
-\section{Introduction}
-
-% 2. Background and Related Work
-\section{Background and Related Work}
-  \subsection{Large Language Models (LLMs)}
-$\circ$ General information on LLMs, such as their workings, training data, text generation, real world usage, and current limitations
-  \subsection{User Interaction with LLMs}
-$\circ$ Explanation of Prompting \newline
-$\circ$ Description of LLM use cases and related work, primarily paying attention to ordinary frequent users (and not only experts)
-% TODO specify related work that we will describe
-
-% 3. Study on Usage Patterns of LLM Users
-\section{Study on Usage Patterns of LLM Users}
-  \subsection{Intro and Research Objective}
-$\circ$ Overview of the study goal, the methodology, and the individual steps that will be taken
-  \subsection{Research Method: ShareGPT}
-$\circ$ Information on the ShareGPT platform, its user base, its suitability for the study, and which data we are going to use
-  \subsection{Study Results}
-    \subsubsection{Findings}
-$\circ$ Listing of the results of the study, potentially segregated into categories that can be defined in advance
-    \subsubsection{Observable Trends}
-$\circ$ Objective analysis of results with a particular focus on observable trends in user behavior and data patterns (including visualizations such as charts)
-
-% 4. Discussion
-\section{Discussion}
-  \subsection{Observed Behaviour (Synthesis)}
-$\circ$ Subjective evaluation of findings
-    \subsubsection{Why do users interact with LLMs the way they do?}
-$\circ$ Reasoning and informed assumptions on the causes of observed behavior
-    \subsubsection{Prompt Improvement Possibilities}
-
-$\circ$ Proposition of ways to enhance prompts as well as associated results based on findings from related research
-  \subsection{Outlook and Future Developments}
-    \subsubsection{Auto-GPT}
-$\circ$ Introduction to future developments in the realm of LLM interaction, such as AI-based agents which may execute prompts autonomously in the future
-    \subsubsection{Prompt Engineering}
-$\circ$ Focus on the newly emerging discipline of prompt engineering which is a direct result of the increased significance of LLMs and required competencies for successful interaction
-
-% 5. Conclusion
-\section{Conclusion}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CHAPTERS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{./chapters/01_introduction}
+\input{./chapters/01_introduction}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BACKGROUND %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{./chapters/02_background}
+\input{./chapters/02_background}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER STUDY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{./chapters/03_study}
+\input{./chapters/03_study}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./chapters/04_discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONCLUSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./chapters/05_conclusion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIBLIOGRAPHY
 \bibliographystyle{ACM-Reference-Format}

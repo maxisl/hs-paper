@@ -1,6 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DISCUSSION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 \label{sec:discussion}
+In this section, we reason about the observed behavior from the two data sources and try to offer
+informed assumptions on potential causes.
 % 1. Why do users interact with LLMs the way they do? Reasoning and informed assumptions on the
 % causes of observed behavior
 % 2. Prompt Improvement Possibilities Proposition of ways to enhance prompts as well as associated
@@ -10,12 +12,118 @@
 
 \subsection{Data Synthesis: Commonalities, Differences, and Possible Explanations}
 \label{subsec:data-synthesis:-commonalities-differences-and-possible-explanations}
-In this section, we reason about the observed behavior from the two data sources and try to offer
-informed assumptions on potential causes.
 
 \subsubsection{ChatGPT Behavior}
-
+In regard to the type of prompt, we observed mainly task-based and question-related queries from
+users.
+This leads us to imagine that some users treat LLMs such as ChatGPT increasingly as their
+personal online assistant when it comes to executing various tasks the model might be able to solve.
+Leveraging AI bots as assistants of the future is a use case that gains popularity and is
+increasingly researched~\cite{eshghie_chatgpt_2023}.
+The second most prevalent type of prompt were questions.
+This observations strengthens the possibility, that NLP models might replace current search engines
+in the future.
+This belief is further confirmed by observations from other researches who already see this
+emerging trend in user behavior~\cite{van_bulck_what_2023}.
+Regarding prompt intent, looking for information was the most popular use case.
+Seemingly, users see ChatGPT as a reliable source of knowledge and trust its abilities.
+This assumption can be dangerous however, as it is well-known that every LLM is probabilistic and
+only as good as its training data.
+Results should therefore always be verified.
+Based on the fact that a lot of users also relied on ChatGPT for suggestions, we assume that it
+is gladly used as a means to get ahead when you hit roadblocks, or need support in endeavours
+that require creativity.
+As we already touched on above, we did not have any requests for opinions of the model.
+We initially thought that opinion related requests on difficult, morally complex, or
+controversial topics would be more popular, since such behavior could be observed multiple times
+when users tried to test the limits of the model, or for example when researchers tested political
+biases~\cite{rozado_political_2023}.
+Regarding the prompt setting, we made an observation similar to Brown et al.~\cite{
+    brown_language_2020}.
+Users do not leverage effective prompting techniques such as a few shot approach.
+Instead, they relied heavily (90\%) on zero shot prompts.
+We attribute this behavior to missing awareness of users about optimized techniques, and
+therefore recommend that LLM providers actively inform users, e.g.\ by
+providing examples, or releasing guidelines.
+Our observations when looking at user engagement makes us think that current LLMs are already
+quite accurate: almost half of the users ended the conversation after the initial answer of
+the LLM (single turn).
+This is further reinforced by 66\% of prompts that were not refined.
+We therefore suspect, that users were actually content with the results most of the time.
+However, we have to mention the possibility that the initial answer was so far off,
+that users could have simply stopped trying after the first attempt.
+Overall, we reckon that users prefer to leverage LLMs for rather simple tasks.
+It is difficult to say, whether users do not trust LLMs enough to throw complex questions at
+them yet, or if it is in the general nature of online search requests that the majority of
+them are rather simple.
+Few users refine their prompts (66\% do not).
+Related work however suggests that refining queries has led to improved results when using search
+engines.
+LLMs can be improved by refinements too, since models are “primed” by all previous prompts in
+the interaction.
+So even if a model does not initially do what you want it to, it might make
+sense to give it more information or context, and try again.
+Due to missing sentiments and feedback of users in the sample interactions, we cannot reliably say
+if users were simply always content because they did not refine, or if they did not know that
+continuing the interaction with the model could have led to better results.
+Finally, we have generally observed a majority of formal, generally polite, and acceptable language.
+We reason that the use of such language ties in with our first observation, and users see
+the bot as a personal online companion, that is therefore well treated.
 
 \subsubsection{Midjourney Behavior}
+For Midjourney, we identified a majority of language inputs.
+We assume, this tendency exists because users prefer to create something new instead
+of reworking existing images.
+We imagine AI could eventually revolutionise the image editing market as well, but apparently is
+not quite there yet.
+This is probably due to missing accuracy when trying to make only very small
+adjustments.
+Regarding prompt length, the official Midjourney docs state: \("\)The Midjourney Bot works best with
+simple, short sentences that describe what you want to see\("\)~\cite{midjourney_documentation_2023}.
+Long sentences should be avoided, but we have seen users ignore this advice multiple times.
+There sometimes seems to be a lack of understanding that more information is not
+always better for quality of model outputs.
+This observation fits another that has been made before:
+Users struggle to formulate precise, effective, and therefore also short, concise prompts.
+We suggested better learning materials and guidance already as a measure to address this issue.
+Regarding composition of the Midjourney prompts, we suspect that this struggle is also the reason
+for the rare occurrence of a keywords-only prompts.
+Users seem to prefer natural language sentences or at least a mix of sentences and keywords
+instead of purely "encoding" their wants.
+To help, developers could offer reformulation engines, that only extract keywords (or create them)
+from input sentences.
+Since almost no images were regenerated as a reaction to the initial result of a prompt
+we had classified as complex, we conclude that Midjourney is able to handle difficult queries well.
+This assumption is confirmed by the fact that users did generally not refine their queries a lot
+after the initial result was shown by the engine.
+It was difficult to judge formality of language of users, but in general users tended to rely on
+formal language, which was probably also influenced by the keyword-focused nature of the prompts.
+We attribute the fact that most queries were formulated clearly to this circumstance as well,
+since keyword focused prompts are usually shorter and less complicated than NLP prompts.
 
 \subsubsection{Commonalities and Differences between ChatGPT and Midjourney}
+A clear distinction between ChatGPT and Midjourney prompts lies in the nature of the model and
+their designs.
+Whereas ChatGPT is trained on full sentence queries, Midjourney is keyword focused.
+However, we have remarked already that Midjourney users tend to at least partially integrate
+sentence structures in their prompts as well, which may be due to the fact that it seems more
+natural and is easier for users due to existing habits.
+Both models were prompted with language on the more formal side.
+It is possible, that this perception is skewed though, as prompts with informal language are
+either not shared in the case of ChatGPT, or are directly filtered before execution in the case
+of Midjourney.
+It is worth mentioning that we were able to observe a previously mentioned general misconception
+that researchers had identified in conversations of users with natural language LLMs already.
+Some users rely on negation when providing instructions and misunderstand that it will not
+prevent the model from producing the unwanted.
+Our data samples from Midjourney contain one example where the user provides an image of the
+fictional character Voldemort from the book and movie saga \("\)Harry Potter\("\).
+They then explicitly ask the model to
+generate an image of "voldemort dying without a nose".
+Since the sole existence of the word "nose" in the prompt primes the model towards including said
+object, all four result images indeed contain visualizations of the fictional character voldemort
+passing--but with a nose.
+Remarkably, there might have been a higher chance that the generated Voldemort does not possess a nose in the final image,
+if the user did not explicitly mention the word, as
+Voldemort does not actually have a human-like nose in the books and movies.
+The prompt therefore achieved the opposite effect.

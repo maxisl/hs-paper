@@ -12,8 +12,8 @@ These explanations are followed by a more general overview of related work on th
 
 \subsection{Large Language Models (LLMs)}
 \label{subsec:large-language-models-(llms)}
-% TODO too repetitive?
-One of the most widely used applications areas of generative AI are Large Language Models (LLMs).
+We have mentioned before that one of the most popular application areas of generative AI
+are Large Language Models (LLMs).
 Among LLMs, the most widely adopted is ChatGPT~\cite{openai_chatgpt_2023}, which is a
 conversational model being developed by OpenAI\@.
 The model is currently publicly accessible and free of charge.
@@ -31,9 +31,9 @@ Large Language Models are a recent advancement that followed the development of 
 transformer architecture, which is a deep learning approach first introduced by researchers in 2017~\cite{vaswani_attention_2017}.
 In future iterations, the Generative Pre-Training (GPT)~\cite{radford_improving_2018} approach
 was adapted for text-based models in particular, laying the foundation for today's most
-popular conversational LLMs, such as ChatGPT\@.
+popular conversational LLMs.
 Since our research revolves around user interaction with dialog-focused models, we will not go into
-more detail about other application and development areas of LLMs from hereon.
+more detail about other LLM application and development areas.
 In addition to ChatGPT, there are also a variety of similar other models focused on text generation,
 such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022}, or
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
@@ -41,44 +41,45 @@ BlenderBot 3~\cite{shuster_blenderbot_2022}.
 
 The primary method of interacting with LLMs is the previously mentioned approach of \("\)prompting\("\) the model.
 Currently, there are no binding guidelines on the concrete structure of prompts,
-and users are therefore completely unconfined in their way of interacting.
-In the following, we go into more detail about different types of prompts, namely zero- and few
--shot.
+and users are therefore completely unconfined in their way of use.
+In the following, we go into more detail about different types of prompts, namely zero, one, and
+few shot.
 
 % TODO include subsubsection "prompting" and explain the general concept?
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Zero-Shot Learning} % TODO Zero-Shot prompting instead of learning?
+\subsubsection{Zero Shot Learning} % TODO Zero-Shot prompting instead of learning?
 It is important to differentiate possible forms of prompting that exist in LLM interactions in order
 to be able to correctly analyze and assess prompts in later parts of this paper.
-To do so, we will clarify the terms \("\)Zero-Shot-\("\) as well as \("\)Few-Shot Learning\("\).
-Zero-Shot Learning has been described as \("\)[\ldots] learning how to recognise
+To do so, we will clarify the terms \("\)Zero Shot \("\) and \("\)Few Shot Learning\("\).
+Zero Shot Learning has been described as \("\)[\ldots] learning how to recognise
 new concepts by just having a description of them\("\)\cite[p. 1]{feris_embarrassingly_2015}.
-
-In regard to prompting, Zero-Shot refers to any form of prompt where the user does not specify
+In regard to prompting, zero shot refers to any form of prompt where the user does not specify
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
-An example for such a query could be \("\)Give me five examples of papers that deal with the topic
+An example for such a prompt could be \("\)Give me five examples of papers that deal with the topic
 of LLMs\("\).
-As expected, model performance (accuracy) was measured as inferior in zero-shot prompting settings compared
-to other settings where more information is provided in the prompt, such as a Few-Shot approach~\cite[p. 5]{brown_language_2020}.
+As expected, model performance (accuracy) was measured as inferior in zero shot prompting
+settings compared
+to other settings where more information is provided in the prompt, such as a few shot approach~\cite[p. 5]{brown_language_2020}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Few-Shot Learning}
-In Few-Shot Learning in contrast, examples are given, albeit they do not necessarily have to be
+\subsubsection{Few Shot Learning}
+In Few Shot Learning in contrast, examples are given, albeit they do not necessarily have to be
 many.
 It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
-In a Few-Shot prompting setting, the user accordingly does provide increased guidance for the model.
+In a few shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
-Solely giving one demonstration in the prompt is commonly referred to as a \("\)One-Shot\("\) approach~\cite[p. 6]{brown_language_2020},
-whereas multiple demonstrations make it \("\)Few-Shot\("\).
+Solely giving one demonstration in the prompt is commonly referred to as a \("\)One Shot\("\)
+approach~\cite[p. 6]{brown_language_2020},
+whereas multiple demonstrations make it \("\)Few Shot\("\).
 To exemplify the differences in learning capabilities depending on the prompting setting,
 we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} in Table~\ref{tab:odd_number_sum}.
-The table displays an interaction we have carried out with the current ChatGPT-3 model, where we
-instructed the model to classify the sum of a sequence of numbers as either even or odd.
+The table displays an interaction we have carried out with the current ChatGPT-3 model.
+We instructed the model to classify the sum of a sequence of numbers as either even or odd.
 
 \begin{table}
     \centering
@@ -111,16 +112,16 @@ instructed the model to classify the sum of a sequence of numbers as either even
 
 Using this example prompt, we could recreate the effects observed by other researchers.
 We can witness that the user request is indeed first wrongly answered by the model
-using a zero-shot approach.
-Only when relying on few-shot prompting and supplying ChatGPT-3 with additional information,
+using a zero shot approach.
+Only when relying on few shot prompting and supplying ChatGPT-3 with additional information,
 the model generates the correct result.
 
 We should note however, that ChatGPT is a dedicated language model, and we have used ChatGPT-3.
 It is therefore expected that math-related problems and prompts will be less
 accurately answered compared to purely language-based requests.
 Depending on the model training and technological progress, it is imaginable that future
-iterations, such as ChatGPT-4, will presumably improve performance and may therefore not have to
-rely on few-shot assistance as much.
+iterations, such as ChatGPT-4, will improve performance and may therefore not have to
+rely on few shot assistance as much.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER INTERACTION WITH LLMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % / RELATED WORK
@@ -144,26 +145,28 @@ Results of search query reformulations can be an indication to also look at prom
 and its effectiveness in more detail.
 Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior when reformulating search
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
-Even though their focus was on search queries only, it was significant that there were improvements
-that could be seen after reformulating queries, concluding that
+Even though their focus was on search queries only, it was significant that they identified
+measurable improvements after reformulating queries, concluding that
 \("\)most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
 
 % TODO add more context: how does this conclusion relate to our research?
 % TODO add another source? e.g. Query Reformulation Techniques for Web Search: A Comprehensive Survey
 
-\subsubsection{Few-Shot Learning Capabilities}
+\subsubsection{Few Shot Learning Capabilities}
 % Paper: Language Models are Few-Shot Learners
 As indicated in the previous section, the prompting setting of an LLM can significantly influence its
 performance in regard to the accuracy of outputs.
-In related research, Brown et al\(.\)~\cite{brown_language_2020} for example have explored differences
+Brown et al\(.\) have explored differences
 in model performance depending on examples provided as part of the LLM prompt~\cite{brown_language_2020}.
-To do so, they have conducted various experiments directly comparing zero-, one-, and few-shot learning.
+To do so, they have conducted various experiments directly comparing zero, one, and few shot
+prompting.
 In conclusion, the trials revealed that LLMs indeed show remarkable performance in various areas,
-ranging from translation and question answering to reasoning tasks, particularly when relying on few-shot
-prompts.
-Notably, those few-shot learning models are able to adapt to new tasks with little training data only.
-It becomes apparent that it is important to provide adequate, fitting examples as part of a prompt in order
-to enhance model outcomes.
+ranging from translation and question answering to reasoning tasks, particularly when relying on
+few shot prompts.
+Notably, those few shot learning models are able to adapt to new tasks with little training data
+only.
+It becomes apparent, that it is important to provide adequate, fitting examples as part of a
+prompt in order to enhance model outcomes.
 
 \subsubsection{Challenges in Non-expert Prompt Design}
 % Paper: Why Johnny can't Prompt...
@@ -185,12 +188,15 @@ The trials revealed two main reasons for these problems:
     \item Second, a false comprehension of AI systems as human-like conversational partners.
     The participants expected AI models to behave as in a human-to-human interaction,
     therefore presuming social understanding.
-    They avoided consequently following general best practices in prompt design such as providing
-    examples, and instead relied on instinct and literal commands, not realizing that prompts
+    They avoided consequently following general best practices in prompt design, such as providing
+    examples.
+    Instead, they relied on instinct and literal commands, not realizing that prompts
     solely bias the model towards one direction.
     In essence, users have to realize that they should not rely on their own understanding of
     language, but instead consider how an LLM interprets the prompt.
-    The example Zamfirescu et al\(.\) give in their research is the misconception of many users
+    The example Zamfirescu et al\(.\) \cite{zamfirescu-pereira_why_2023} give in their research
+    is the misconception of many
+    users
     that simply prompting a model not to say \("\)XYZ\("\) will not actually prevent the model from doing
     so in any case.
     It is still possible that the model will output \("\)XYZ\("\) in subsequent responses due to
@@ -203,27 +209,31 @@ The trials revealed two main reasons for these problems:
 % Paper: How to Prompt? Opportunities and Challenges of Zero- and Few-Shot Learning...
 % "we propose four design goals for user interfaces that support prompting"
 % What ideas are out there to improve prompt design?
-A final aspect that highlights user difficulties in optimal prompt creation is the existing
-research aspiring to provide assisting tools that facilitate the whole design process end-to-end.
-As such, researchers have proposed guidelines for prompt design applications that assist
+A final aspect that highlights user difficulties in optimal query creation is existing
+research in the area of assistance tools which facilitate the entire prompt design process
+end-to-end.
+To achieve this, researchers have proposed guidelines for prompt design applications that assist
 users in prompt engineering by providing an adequate interface~\cite{dang_how_2022}.
 The motivation stems from the same realization that has already been discussed above: overall,
 LLM users struggle to communicate their expectations and intentions effectively to the model.
 Instead, they commonly approach prompting as a trial and error process.
 Currently, there is no single design interface or definite guidelines for prompts, which would
 assist non-technical users in particular.
-Example propositions to ease design include detecting keywords in prompt formulation and allowing
-edits of those via a dropdown menu, providing basic prompt-building blocks from which a user can
-select,
-offering the possibility to combine multiple prompts, and storing selected prompts in a toolbar for
-quick and repeated execution. % TODO shorten?
+Example propositions to ease design include the detection of keywords during prompt formulation and
+allowing
+edits of those via a dropdown menu.
+Also, basic prompt-building blocks from which a user can
+select could be provided.
+Furthermore, offering the possibility to combine multiple prompts or storing specific queries
+in a toolbar for quick and repeated execution are imaginable options.
 \newline
 
 In summary, the volume of related research in regard to user prompting behavior in LLM
 interactions shows the significance of the topic for effective use of this technology.
-Few definitive guidelines exist, and users are largely left on their own when formulating prompts,
-especially non-technical users which may lack deep knowledge on the subject.
+Few definitive guidelines exist, and users are largely left on their own when formulating prompts.
+This lack of guidance is particularly challenging for non-technical users which may lack deep
+knowledge on the subject.
 Although superior prompting strategies have been discovered, users do not consistently
 implement them, even when specifically instructed to do so.
-So far, these behaviors have been attributed to existing habits and missing perception of LLMs as
-artificial and not human.
+% So far, these behaviors have been attributed to existing habits and missing perception of LLMs
+% as artificial and not human.

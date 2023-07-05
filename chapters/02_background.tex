@@ -10,7 +10,7 @@ These explanations are followed by a more general overview of related work on th
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LLMs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Large Language Models (LLMs)}
+\subsection{Large Language Models (Llms) And Text-To-Image Generation Tools}
 \label{subsec:large-language-models-(llms)}
 We have mentioned before that one of the most popular application areas of generative AI
 are Large Language Models (LLMs).
@@ -38,10 +38,26 @@ In addition to ChatGPT, there are also a variety of similar other models focused
 such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022}, or
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
 
+% What is a text-to-image generation tool? What does it look like?
+Text-to-image AI tools have seen significant developments in recent years as well.
+First research in the area dates back to 2014, when Goodfellow et al\(.\)~\cite{goodfellow_generative_2014,goodfellow_generative_2020}
+first introduced the concept of generative adversarial networks (GANs).
+The general idea of this framework is the creation of a generative network that creates
+images, as well as a discriminator network which tries to differentiate between real and fake
+examples~\cite{creswell_generative_2018}.
+Through competition of those networks they train each other and thereby continually enhance their
+performance.
+Further developments from Scott Reed et al\(.\)~\cite{} then built upon these foundational
+building blocks and focused on the generation of realistic images.
+To translate text to an image, two general steps are necessary:
+First, textual descriptions are encoded into a vector for the generator.
+In a second step, the image generator then leverages this encoding, and synthesizes a final image.
 
-The primary method of interacting with LLMs is the previously mentioned approach of \("\)prompting\("\) the model.
+
+The primary method of interacting with LLMs and text-to-image generation tools is the previously
+mentioned approach of \("\)prompting\("\).
 Currently, there are no binding guidelines on the concrete structure of prompts,
-and users are therefore completely unconfined in their way of use.
+and users are therefore rather unconfined in their way of use.
 In the following, we go into more detail about different types of prompts, namely zero, one, and
 few shot.
 

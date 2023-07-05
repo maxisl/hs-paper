@@ -1,12 +1,111 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Maximilian Slapnik at 2023-07-05 10:20:47 +0200 
+%% Created for Maximilian Slapnik at 2023-07-05 11:30:30 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@misc{ge_openagi_2023,
+	abstract = {Human intelligence excels at combining basic skills to solve complex tasks. This capability is vital for Artificial Intelligence (AI) and should be embedded in comprehensive intelligent models, enabling them to harness expert models for complex task-solving towards Artificial General Intelligence (AGI). Large Language Models (LLMs) show promising learning and reasoning abilities, and can effectively use external models to tackle complex problems. In this work, we introduce OpenAGI, an open-source AGI research platform designed for multi-step, real-world tasks. Specifically, OpenAGI uses a dual strategy, integrating standard benchmark tasks for benchmarking and evaluation, and open-ended tasks including more expandable models for creative problem-solving. Tasks are presented as natural language queries to the LLM, which then selects and executes appropriate models. We also propose a Reinforcement Learning from Task Feedback (RLTF) mechanism that uses task results to improve the LLM's ability, which creates a self-improving AI feedback loop. While we acknowledge that AGI is a broad and multifaceted research challenge with no singularly defined solution path, the integration of LLMs with domain-specific expert models, inspired by mirroring the blend of general and specialized intelligence in humans, offers a promising approach towards AGI. We are open-sourcing the OpenAGI project's code, dataset, benchmarks, evaluation methods, and demo to foster community involvement in AGI advancement: https://github.com/agiresearch/OpenAGI.},
+	author = {Ge, Yingqiang and Hua, Wenyue and Mei, Kai and Ji, Jianchao and Tan, Juntao and Xu, Shuyuan and Li, Zelong and Zhang, Yongfeng},
+	date-added = {2023-07-05 11:30:28 +0200},
+	date-modified = {2023-07-05 11:30:28 +0200},
+	file = {Ge et al. - 2023 - OpenAGI When LLM Meets Domain Experts.pdf:/Users/maximilianslapnik/Zotero/storage/CNZMY6BX/Ge et al. - 2023 - OpenAGI When LLM Meets Domain Experts.pdf:application/pdf},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language, Computer Science - Machine Learning},
+	language = {en},
+	month = jun,
+	note = {arXiv:2304.04370 [cs]},
+	publisher = {arXiv},
+	shorttitle = {{OpenAGI}},
+	title = {{OpenAGI}: {When} {LLM} {Meets} {Domain} {Experts}},
+	url = {http://arxiv.org/abs/2304.04370},
+	urldate = {2023-07-05},
+	year = {2023},
+	bdsk-url-1 = {http://arxiv.org/abs/2304.04370}}
+
+@inproceedings{zhu_be_2017,
+	abstract = {We present a novel and effective approach for generating new clothing on a wearer through generative adversarial learning. Given an input image of a person and a sentence describing a different outfit, our model ``redresses'' the person as desired, while at the same time keeping the wearer and her/his pose unchanged. Generating new outfits with precise regions conforming to a language description while retaining wearer's body structure is a new challenging task. Existing generative adversarial networks are not ideal in ensuring global coherence of structure given both the input photograph and language description as conditions. We address this challenge by decomposing the complex generative process into two conditional stages. In the first stage, we generate a plausible semantic segmentation map that obeys the wearer's pose as a latent spatial arrangement. An effective spatial constraint is formulated to guide the generation of this semantic segmentation map. In the second stage, a generative model with a newly proposed compositional mapping layer is used to render the final image with precise regions and textures conditioned on this map. We extended the DeepFashion dataset [8] by collecting sentence descriptions for 79K images. We demonstrate the effectiveness of our approach through both quantitative and qualitative evaluations. A user study is also conducted.},
+	address = {Venice},
+	author = {Zhu, Shizhan and Fidler, Sanja and Urtasun, Raquel and Lin, Dahua and Loy, Chen Change},
+	booktitle = {2017 {IEEE} {International} {Conference} on {Computer} {Vision} ({ICCV})},
+	date-added = {2023-07-05 11:20:25 +0200},
+	date-modified = {2023-07-05 11:20:25 +0200},
+	doi = {10.1109/ICCV.2017.186},
+	file = {Zhu et al. - 2017 - Be Your Own Prada Fashion Synthesis with Structur.pdf:/Users/maximilianslapnik/Zotero/storage/ZNFKNLL2/Zhu et al. - 2017 - Be Your Own Prada Fashion Synthesis with Structur.pdf:application/pdf},
+	isbn = {978-1-5386-1032-9},
+	language = {en},
+	month = oct,
+	pages = {1689--1697},
+	publisher = {IEEE},
+	shorttitle = {Be {Your} {Own} {Prada}},
+	title = {Be {Your} {Own} {Prada}: {Fashion} {Synthesis} with {Structural} {Coherence}},
+	url = {http://ieeexplore.ieee.org/document/8237448/},
+	urldate = {2023-07-05},
+	year = {2017},
+	bdsk-url-1 = {http://ieeexplore.ieee.org/document/8237448/},
+	bdsk-url-2 = {https://doi.org/10.1109/ICCV.2017.186}}
+
+@misc{karras_progressive_2018,
+	abstract = {We describe a new training methodology for generative adversarial networks. The key idea is to grow both the generator and discriminator progressively: starting from a low resolution, we add new layers that model increasingly fine details as training progresses. This both speeds the training up and greatly stabilizes it, allowing us to produce images of unprecedented quality, e.g., CELEBA images at 10242. We also propose a simple way to increase the variation in generated images, and achieve a record inception score of 8.80 in unsupervised CIFAR10. Additionally, we describe several implementation details that are important for discouraging unhealthy competition between the generator and discriminator. Finally, we suggest a new metric for evaluating GAN results, both in terms of image quality and variation. As an additional contribution, we construct a higher-quality version of the CELEBA dataset.},
+	author = {Karras, Tero and Aila, Timo and Laine, Samuli and Lehtinen, Jaakko},
+	date-added = {2023-07-05 11:17:05 +0200},
+	date-modified = {2023-07-05 11:17:05 +0200},
+	file = {Karras et al. - 2018 - Progressive Growing of GANs for Improved Quality, .pdf:/Users/maximilianslapnik/Zotero/storage/IIK7E9MD/Karras et al. - 2018 - Progressive Growing of GANs for Improved Quality, .pdf:application/pdf},
+	keywords = {Computer Science - Machine Learning, Computer Science - Neural and Evolutionary Computing, Statistics - Machine Learning},
+	language = {en},
+	month = feb,
+	note = {arXiv:1710.10196 [cs, stat]},
+	publisher = {arXiv},
+	title = {Progressive {Growing} of {GANs} for {Improved} {Quality}, {Stability}, and {Variation}},
+	url = {http://arxiv.org/abs/1710.10196},
+	urldate = {2023-07-05},
+	year = {2018},
+	bdsk-url-1 = {http://arxiv.org/abs/1710.10196}}
+
+@inproceedings{xu_attngan_2018,
+	abstract = {In this paper, we propose an Attentional Generative Adversarial Network (AttnGAN) that allows attention-driven, multi-stage refinement for fine-grained text-to-image generation. With a novel attentional generative network, the AttnGAN can synthesize fine-grained details at different subregions of the image by paying attentions to the relevant words in the natural language description. In addition, a deep attentional multimodal similarity model is proposed to compute a fine-grained image-text matching loss for training the generator. The proposed AttnGAN significantly outperforms the previous state of the art, boosting the best reported inception score by 14.14\% on the CUB dataset and 170.25\% on the more challenging COCO dataset. A detailed analysis is also performed by visualizing the attention layers of the AttnGAN. It for the first time shows that the layered attentional GAN is able to automatically select the condition at the word level for generating different parts of the image.},
+	address = {Salt Lake City, UT, USA},
+	author = {Xu, Tao and Zhang, Pengchuan and Huang, Qiuyuan and Zhang, Han and Gan, Zhe and Huang, Xiaolei and He, Xiaodong},
+	booktitle = {2018 {IEEE}/{CVF} {Conference} on {Computer} {Vision} and {Pattern} {Recognition}},
+	date-added = {2023-07-05 11:13:40 +0200},
+	date-modified = {2023-07-05 11:13:40 +0200},
+	doi = {10.1109/CVPR.2018.00143},
+	file = {Xu et al. - 2018 - AttnGAN Fine-Grained Text to Image Generation wit.pdf:/Users/maximilianslapnik/Zotero/storage/SPFFDWVL/Xu et al. - 2018 - AttnGAN Fine-Grained Text to Image Generation wit.pdf:application/pdf},
+	isbn = {978-1-5386-6420-9},
+	language = {en},
+	month = jun,
+	pages = {1316--1324},
+	publisher = {IEEE},
+	shorttitle = {{AttnGAN}},
+	title = {{AttnGAN}: {Fine}-{Grained} {Text} to {Image} {Generation} with {Attentional} {Generative} {Adversarial} {Networks}},
+	url = {https://ieeexplore.ieee.org/document/8578241/},
+	urldate = {2023-07-05},
+	year = {2018},
+	bdsk-url-1 = {https://ieeexplore.ieee.org/document/8578241/},
+	bdsk-url-2 = {https://doi.org/10.1109/CVPR.2018.00143}}
+
+@article{reed_generative_2016,
+	abstract = {Automatic synthesis of realistic images from text would be interesting and useful, but current AI systems are still far from this goal. However, in recent years generic and powerful recurrent neural network architectures have been developed to learn discriminative text feature representations. Meanwhile, deep convolutional generative adversarial networks (GANs) have begun to generate highly compelling images of specific categories, such as faces, album covers, and room interiors. In this work, we develop a novel deep architecture and GAN formulation to effectively bridge these advances in text and image modeling, translating visual concepts from characters to pixels. We demonstrate the capability of our model to generate plausible images of birds and flowers from detailed text descriptions.},
+	author = {Reed, Scott and Akata, Zeynep and Yan, Xinchen and Logeswaran, Lajanugen and Schiele, Bernt and Lee, Honglak},
+	date-added = {2023-07-05 10:31:00 +0200},
+	date-modified = {2023-07-05 10:31:00 +0200},
+	file = {Reed et al. - Generative Adversarial Text to Image Synthesis.pdf:/Users/maximilianslapnik/Zotero/storage/4QUPHZ7S/Reed et al. - Generative Adversarial Text to Image Synthesis.pdf:application/pdf},
+	language = {en},
+	title = {Generative {Adversarial} {Text} to {Image} {Synthesis}},
+	year = {2016}}
+
+@article{radford_language_2018,
+	abstract = {Natural language processing tasks, such as question answering, machine translation, reading comprehension, and summarization, are typically approached with supervised learning on taskspecific datasets. We demonstrate that language models begin to learn these tasks without any explicit supervision when trained on a new dataset of millions of webpages called WebText. When conditioned on a document plus questions, the answers generated by the language model reach 55 F1 on the CoQA dataset - matching or exceeding the performance of 3 out of 4 baseline systems without using the 127,000+ training examples. The capacity of the language model is essential to the success of zero-shot task transfer and increasing it improves performance in a log-linear fashion across tasks. Our largest model, GPT-2, is a 1.5B parameter Transformer that achieves state of the art results on 7 out of 8 tested language modeling datasets in a zero-shot setting but still underfits WebText. Samples from the model reflect these improvements and contain coherent paragraphs of text. These findings suggest a promising path towards building language processing systems which learn to perform tasks from their naturally occurring demonstrations.},
+	author = {Radford, Alec and Wu, Jeffrey and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya},
+	date-added = {2023-07-05 10:28:20 +0200},
+	date-modified = {2023-07-05 10:28:20 +0200},
+	file = {Radford et al. - Language Models are Unsupervised Multitask Learner.pdf:/Users/maximilianslapnik/Zotero/storage/D66I7HZ5/Radford et al. - Language Models are Unsupervised Multitask Learner.pdf:application/pdf},
+	language = {en},
+	title = {Language {Models} are {Unsupervised} {Multitask} {Learners}},
+	year = {2018}}
 
 @article{creswell_generative_2018,
 	abstract = {Generative adversarial networks (GANs) provide a way to learn deep representations without extensively annotated training data. They achieve this through deriving backpropagation signals through a competitive process involving a pair of networks. The representations that can be learned by GANs may be used in a variety of applications, including image synthesis, semantic image editing, style transfer, image super-resolution and classification. The aim of this review paper is to provide an overview of GANs for the signal processing community, drawing on familiar analogies and concepts where possible. In addition to identifying different methods for training and constructing GANs, we also point to remaining challenges in their theory and application.},

@@ -10,7 +10,7 @@ These explanations are followed by a more general overview of related work on th
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LLMs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Large Language Models (Llms) And Text-To-Image Generation Tools}
+\subsection{Large Language Models (LLMs) And Text-To-Image Generation Tools}
 \label{subsec:large-language-models-(llms)}
 We have mentioned before that one of the most popular application areas of generative AI
 are Large Language Models (LLMs).
@@ -20,7 +20,7 @@ The model is currently publicly accessible and free of charge.
 
 % What is an LLM? What does it look like?
 LLMs can be leveraged for a variety of tasks, but their main focus area is Natural Language Processing
-(NLP).
+(NLP)~\cite{radford_language_2018}.
 Therefore, most LLMs designed for end users are implemented in the form of chatbots,
 as is the case with ChatGPT for example.
 They typically consist of an interface comprised of an input field for the user to type in arbitrary
@@ -37,6 +37,7 @@ more detail about other LLM application and development areas.
 In addition to ChatGPT, there are also a variety of similar other models focused on text generation,
 such as LaMDA~\cite{thoppilan_lamda_2022}, Sparrow~\cite{glaese_improving_2022}, or
 BlenderBot 3~\cite{shuster_blenderbot_2022}.
+\newline
 
 % What is a text-to-image generation tool? What does it look like?
 Text-to-image AI tools have seen significant developments in recent years as well.
@@ -45,14 +46,23 @@ first introduced the concept of generative adversarial networks (GANs).
 The general idea of this framework is the creation of a generative network that creates
 images, as well as a discriminator network which tries to differentiate between real and fake
 examples~\cite{creswell_generative_2018}.
+The generator has the objective of creating such well generated images, that the discriminator
+cannot distinguish whether it is real or not.
+Simultaneously, the discriminator seeks to improve its accuracy in order to not get deceived by
+the generator.
 Through competition of those networks they train each other and thereby continually enhance their
 performance.
-Further developments from Scott Reed et al\(.\)~\cite{} then built upon these foundational
-building blocks and focused on the generation of realistic images.
+
+Further developments from Reed et al\(.\)~\cite{reed_generative_2016} then built upon these foundational
+building blocks and focused on the generation of photorealistic images.
 To translate text to an image, two general steps are necessary:
 First, textual descriptions are encoded into a vector for the generator.
 In a second step, the image generator then leverages this encoding, and synthesizes a final image.
-
+More recent advancements continually enhanced this basic process by adding additional
+functionality and improvements, such as attention mechanisms to aid the generator in focusing on
+important details~\cite{xu_attngan_2018}, generating images from coarse to fine in order to improve resolution~\cite{karras_progressive_2018},
+or domain specific models which excel in certain realms they were specifically designed for~\cite{zhu_be_2017}.
+\newline
 
 The primary method of interacting with LLMs and text-to-image generation tools is the previously
 mentioned approach of \("\)prompting\("\).
@@ -60,8 +70,6 @@ Currently, there are no binding guidelines on the concrete structure of prompts,
 and users are therefore rather unconfined in their way of use.
 In the following, we go into more detail about different types of prompts, namely zero, one, and
 few shot.
-
-% TODO include subsubsection "prompting" and explain the general concept?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

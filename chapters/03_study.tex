@@ -132,19 +132,22 @@ Analogously, we assumed dissatisfaction if they regenerated the whole image.
     \caption{ShareGPT Prompt Analysis Categories}
     \begin{tabular}{@{}llll@{}}
         \toprule
-        Type        & Intent        & Length             & Setting   \\ \midrule
-        Question    & Information   & Long (5 + Sent.)   & Zero Shot \\
-        Statement   & Advice        & Med (2 - 4 Sent.)  & One Shot  \\
-        Command     & Clarification & Short (<= 1 Sent.) & Few Shot  \\
-        Task-based  & Opinion       &                    &           \\
-        & Suggestion    &                    &           \\
-        & Entertainment &                    &           \\
-        &               &                    &           \\
+        Type        & Intent        & Length              & Setting   \\ \midrule
+        Question \hfill 36\%    & Information \hfill 36\%   & Long \hfill 28\%  & Zero
+        S \hfill 90\% \\
+        Statement \hfill 2\%    & Advice \hfill 10\%        & Med \hfill 34\% & One S \hfill 8\% \\
+        Task-based \hfill 62\%  & Opinion \hfill 34\%       & Short \hfill 38\% & Few S \hfill 2\% \\
+                                & Suggestion \hfill 10\%   &                    &           \\
+                                & Entertainment \hfill 36\% &                    &           \\
+                                &                           &                    &           \\
+                                &                            &                    &           \\
         \toprule
-        Engagement  & Complexity    & Refinement         & Language  \\ \midrule
-        Single Turn & Simple        & None               & Formal    \\
-        Multi Turn  & Intermediate  & Once               & Informal  \\
-        &               & Multiple            &           \\ \\
+        Engagement              & Complexity    & Refinement         & Language  \\ \midrule
+        Single Turn \hfill 48\%  & Simple \hfill 48\%       & None     \hfill 66\%           &
+        Formal    \\
+        Multi Turn \hfill 52\%   & Intermediate \hfill 38\% & Once     \hfill 22\%          &
+        Informal  \\
+                                & Complex \hfill 14\%      & Multiple \hfill 12\%           &           \\ \\
         \bottomrule
     \end{tabular}
     \label{tab:sharegpt-prompt-analysis-categories}

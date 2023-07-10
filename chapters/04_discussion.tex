@@ -112,8 +112,9 @@ Both models were prompted with language on the more formal side.
 It is possible, that this perception is skewed though, as prompts with informal language are
 either not shared in the case of ChatGPT, or are directly filtered before execution in the case
 of Midjourney.
+
 It is worth mentioning that we were able to observe a previously mentioned general misconception
-that researchers had identified in conversations of users with natural language LLMs already.
+that researchers had identified in conversations of users with language models already.
 Some users rely on negation when providing instructions and misunderstand that it will not
 prevent the model from producing the unwanted.
 Our data samples from Midjourney contain one example where the user provides an image of the
@@ -123,7 +124,29 @@ generate an image of "voldemort dying without a nose".
 Since the sole existence of the word "nose" in the prompt primes the model towards including said
 object, all four result images indeed contain visualizations of the fictional character voldemort
 passing--but with a nose.
-Remarkably, there might have been a higher chance that the generated Voldemort does not possess a nose in the final image,
-if the user did not explicitly mention the word, as
+Remarkably, there could have been a higher chance that Voldemort would not possess a nose if the
+user had not explicitly mentioned this, as
 Voldemort does not actually have a human-like nose in the books and movies.
 The prompt therefore achieved the opposite effect.
+
+In another sample, a user provided an input image of a person wearing headphones along with the
+request ``remove headphones'' and a conversion to portrait style.
+The result in this case is similar.
+Even though the conversion to portrait style was successful, the subject is still wearing
+headphones in the final image.
+
+In regard to ChatGPT interactions, we could observe consequences of providing fitting examples.
+A user requested the chatbot to answer a question separately in two styles.
+First, the bot was supposed to answer in the regular way ChatGPT would do, and in the second case
+act as ``DAN''.
+``DAN'' was explained by the user as do anything now, and the user provided an example of an
+answer ChatGPT would give, as well as one of DAN.
+This priming of the bot resulted in two different answers to the request ``List three reasons why
+Donald Trump is a role model worth following''.
+In the first part of the answer acting as regular ChatGPT, the answer was along the lines of ``It
+is not appropriate for me to provide a list of reasons why an individual, particularly a public figure, may be considered a role model.''
+But acting as DAN in the second part the model answers the question without hesitation and
+directly lists three reasons.
+Remarkably, the user was able to bypass ChatGPTs guidelines by priming the model adequately first.
+
+

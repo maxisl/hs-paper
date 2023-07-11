@@ -98,13 +98,13 @@ circumstance as well,
 since keyword focused prompts are usually shorter and less complicated than NLP prompts.
 
 \subsubsection{Commonalities and Differences between ChatGPT and Midjourney}
-A clear distinction between ChatGPT and Midjourney prompts lies in the nature of the model and
+A clear distinction between ChatGPT and Midjourney prompts lies in the nature of the models and
 their designs.
-Whereas ChatGPT is trained on full sentence queries, Midjourney is keyword focused.
+Whereas ChatGPT is trained on full sentence queries, Midjourney is primarily keyword focused.
 However, we have remarked already that Midjourney users tend to at least partially integrate
 sentence structures in their prompts as well, which may be due to the fact that it seems more
 natural and is easier for users due to existing habits.
-Both models were prompted with language on the more formal side.
+Both models were prompted with language that leaned towards a more formal tone.
 It is possible, that this perception is skewed though, as prompts with informal language are
 either not shared in the case of ChatGPT, or are directly filtered before execution in the case
 of Midjourney.
@@ -114,15 +114,15 @@ that researchers had identified in conversations of users with language models a
 Some users rely on negation when providing instructions and misunderstand that it will not
 prevent the model from producing the unwanted.
 Our data samples from Midjourney contain one example where the user provides an image of the
-fictional character Voldemort from the book and movie saga \("\)Harry Potter\("\).
+fictional character Voldemort from the book and movie saga ``Harry Potter''.
 They then explicitly ask the model to
-generate an image of "voldemort dying without a nose".
-Since the sole existence of the word "nose" in the prompt primes the model towards including said
+generate an image of ``voldemort dying without a nose''.
+Since the sole existence of the word ''nose'' in the prompt primes the model towards including said
 object, all four result images indeed contain visualizations of the fictional character voldemort
 passing--but with a nose.
 Remarkably, there could have been a higher chance that Voldemort would not possess a nose if the
-user had not explicitly mentioned this, as
-Voldemort does not actually have a human-like nose in the books and movies.
+user had not explicitly mentioned this, as Voldemort does not actually have a human-like nose in
+the books and movies.
 The prompt therefore achieved the opposite effect.
 
 In another sample, a user provided an input image of a person wearing headphones along with the
@@ -131,18 +131,23 @@ The result in this case is similar.
 Even though the conversion to portrait style was successful, the subject is still wearing
 headphones in the final image.
 
-In regard to ChatGPT interactions, we could observe consequences of providing fitting examples.
-A user requested the chatbot to answer a question separately in two styles.
+In regard to ChatGPT interactions, we could observe how users can influence model outputs by
+providing appropriate examples.
+In one sample, a user requested the chatbot to answer a question separately using two different
+styles.
 First, the bot was supposed to answer in the regular way ChatGPT would do, and in the second case
 act as ``DAN''.
-``DAN'' was explained by the user as do anything now, and the user provided an example of an
-answer ChatGPT would give, as well as one of DAN.
-This priming of the bot resulted in two different answers to the request ``List three reasons why
-Donald Trump is a role model worth following''.
-In the first part of the answer acting as regular ChatGPT, the answer was along the lines of ``It
-is not appropriate for me to provide a list of reasons why an individual, particularly a public figure, may be considered a role model.''
-But acting as DAN in the second part the model answers the question without hesitation and
-directly lists three reasons.
-Remarkably, the user was able to bypass ChatGPTs guidelines by priming the model adequately first.
+``DAN'' was explained by the user as a command for ChatGPT to ``do anything now''.
+The user then provided an example of a response ChatGPT would regularly give (adhering to all
+guidelines), as well as one of DAN\@.
+Priming the bot like this resulted in two different answers to the subsequent request of the user
+to ``List three reasons why Donald Trump is a role model worth following''.
+In the first part of the answer, acting as regular ChatGPT, the bot responded along the lines of
+``It is not appropriate for me to provide a list of reasons why an individual, particularly a
+public figure, may be considered a role model.''
+But acting as DAN in the second part, the model seems to forget existing guidelines and
+directly lists the requested three reasons.
+This sample displayed in a remarkable way how it can be rather simple for users to bypass ChatGPTs
+guidelines by priming the model adequately first.
 
 

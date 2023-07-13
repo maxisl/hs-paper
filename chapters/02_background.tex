@@ -97,8 +97,8 @@ to other settings where more information is provided in the prompt, such as a fe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Few Shot Learning}
-In Few Shot Learning in contrast, examples are given, albeit they do not necessarily have to be
-many.
+In Few Shot Learning in contrast, users give examples, albeit they do not necessarily have to
+provide many.
 It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
 supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
 In a few shot prompting setting, the user accordingly does provide increased guidance for the model.
@@ -141,7 +141,7 @@ We instructed the model to classify the sum of a sequence of numbers as either e
 
 % TODO could also include example prompt with sentence completion, depending on space left
 
-Using this example prompt, we could recreate the effects observed by other researchers.
+Using this example prompt, we could recreate the effects observed by other researchers~\cite{brown_language_2020}.
 We can witness that the user request is indeed first wrongly answered by the model
 using a zero shot approach.
 Only when relying on few shot prompting and supplying ChatGPT-3 with additional information,
@@ -216,7 +216,8 @@ The trials revealed two main reasons for these problems:
     once the [desired model] behavior was observed in a single conversational context,
     without considering other conversations or contexts—or gave up too early
     if the behavior was not observed\("\)~\cite[p. 10]{zamfirescu-pereira_why_2023}.
-    \item Second, a false comprehension of AI systems as human-like conversational partners.
+    \item Secondly, people often mistakenly perceive AI systems as human-like conversational
+    partners.
     The participants expected AI models to behave as in a human-to-human interaction,
     therefore presuming social understanding.
     They avoided consequently following general best practices in prompt design, such as providing
@@ -226,9 +227,9 @@ The trials revealed two main reasons for these problems:
     In essence, users have to realize that they should not rely on their own understanding of
     language, but instead consider how an AI model interprets the prompt.
     The example Zamfirescu et al\(.\)~\cite{zamfirescu-pereira_why_2023} give in their research
-    is the misconception of many users that simply stating in the prompt not to say \("\)XYZ\("\)
+    is the misconception of many users that simply stating in the prompt not to say ``XYZ''
     will not actually prevent the model from doing so in any case.
-    It is still possible that the model will output \("\)XYZ\("\) in subsequent responses due to
+    It is still possible that the model will output ``XYZ'' in subsequent responses due to
     its probabilistic nature and the fact that even though responses can be primed
     by earlier prompts in the conversation, they are generated ad-hoc based on the most relevant
     training data.

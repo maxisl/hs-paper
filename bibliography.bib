@@ -1,12 +1,34 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% https://bibdesk.sourceforge.io/
 
-%% Created for Maximilian Slapnik at 2023-07-15 08:47:47 +0200 
+%% Created for Maximilian Slapnik at 2023-07-15 11:23:41 +0200 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
+
+@inproceedings{wang_reprompt_2023,
+	abstract = {Generative AI models have shown impressive ability to produce images with text prompts, which could benefit creativity in visual art creation and self-expression. However, it is unclear how precisely the generated images express contexts and emotions from the input texts. We explored the emotional expressiveness of AI-generated images and developed RePrompt, an automatic method to refine text prompts toward precise expression of the generated images. Inspired by crowdsourced editing strategies, we curated intuitive text features, such as the number and concreteness of nouns, and trained a proxy model to analyze the feature effects on the AI-generated image. With model explanations of the proxy model, we curated a rubric to adjust text prompts to optimize image generation for precise emotion expression. We conducted simulation and user studies, which showed that RePrompt significantly improves the emotional expressiveness of AI-generated images, especially for negative emotions.},
+	address = {Hamburg Germany},
+	author = {Wang, Yunlong and Shen, Shuyuan and Lim, Brian Y},
+	booktitle = {Proceedings of the 2023 {CHI} {Conference} on {Human} {Factors} in {Computing} {Systems}},
+	date-added = {2023-07-15 11:23:40 +0200},
+	date-modified = {2023-07-15 11:23:40 +0200},
+	doi = {10.1145/3544548.3581402},
+	file = {Wang et al. - 2023 - RePrompt Automatic Prompt Editing to Refine AI-Ge.pdf:/Users/maximilianslapnik/Zotero/storage/AIPZ65AF/Wang et al. - 2023 - RePrompt Automatic Prompt Editing to Refine AI-Ge.pdf:application/pdf},
+	isbn = {978-1-4503-9421-5},
+	language = {en},
+	month = apr,
+	pages = {1--29},
+	publisher = {ACM},
+	shorttitle = {{RePrompt}},
+	title = {{RePrompt}: {Automatic} {Prompt} {Editing} to {Refine} {AI}-{Generative} {Art} {Towards} {Precise} {Expressions}},
+	url = {https://dl.acm.org/doi/10.1145/3544548.3581402},
+	urldate = {2023-07-15},
+	year = {2023},
+	bdsk-url-1 = {https://dl.acm.org/doi/10.1145/3544548.3581402},
+	bdsk-url-2 = {https://doi.org/10.1145/3544548.3581402}}
 
 @misc{hertz_prompt--prompt_2022,
 	abstract = {Recent large-scale text-driven synthesis models have attracted much attention thanks to their remarkable capabilities of generating highly diverse images that follow given text prompts. Such text-based synthesis methods are particularly appealing to humans who are used to verbally describe their intent. Therefore, it is only natural to extend the text-driven image synthesis to text-driven image editing. Editing is challenging for these generative models, since an innate property of an editing technique is to preserve most of the original image, while in the text-based models, even a small modification of the text prompt often leads to a completely different outcome. State-of-the-art methods mitigate this by requiring the users to provide a spatial mask to localize the edit, hence, ignoring the original structure and content within the masked region. In this paper, we pursue an intuitive prompt-toprompt editing framework, where the edits are controlled by text only. To this end, we analyze a text-conditioned model in depth and observe that the cross-attention layers are the key to controlling the relation between the spatial layout of the image to each word in the prompt. With this observation, we present several applications which monitor the image synthesis by editing the textual prompt only. This includes localized editing by replacing a word, global editing by adding a specification, and even delicately controlling the extent to which a word is reflected in the image. We present our results over diverse images and prompts, demonstrating high-quality synthesis and fidelity to the edited prompts.},

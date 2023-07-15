@@ -8,7 +8,8 @@ taken to obtain sufficient results.
 \label{subsec:research-objective}
 % Intro and Research Objective of the study goal, the methodology, and the individual
 % steps that will be taken
-The main outlined goal of our research is to gain a fundamental understanding of user behavior in conversation with Large Language Models.
+The main outlined goal of our research is to gain a fundamental understanding of user behavior in
+conversation with Large Language Models and similar AI tools.
 Our analysis aims to identify common patterns and strategies in those interactions.
 Previous research indicates that users regularly face challenges and difficulties, especially
 when trying to formulate effective prompts.
@@ -19,8 +20,9 @@ responses.
 Given the various kinds of available generative models, we want to examine differences in
 prompting behavior according to model type as well.
 
-Since related insights suggest that reformulating search queries is a popular strategy to improve
-results, we want to investigate if users apply this strategy in AI conversations as well.
+Since related insights we have already highlighted suggest that reformulating search queries is a
+popular strategy to improve results, we want to investigate if users apply this strategy in AI
+conversations as well.
 Furthermore, we want to assess the extent to which users show awareness of effective prompt
 formulation strategies, such as few-shot learning, and whether they rely on appropriate language
 that is machine and not human directed, thus showing comprehension that they are talking to an AI\@.
@@ -61,7 +63,7 @@ Notably, the Midjourney Bot does not understand grammar, sentence structure, or 
 humans do~\cite{midjourney_documentation_2023}.
 Midjourney's developers actively encourage using fewer, but more precise and impactful words when
 prompting the model.
-For example, they suggest using \("\)gigantic\("\) instead of \("\)big\("\) in order to achieve
+For example, they suggest using ``gigantic'' instead of ``big'' in order to achieve
 better results.
 This recommendation stems from the fact that fewer words in a prompt intensify the influence each
 individual word has on the final outcome.
@@ -91,24 +93,29 @@ Similarly, the categories and sub-categories for image-focused Midjourney prompt
 in Table~\ref{tab:midjourney-prompt-analysis-categories}.
 Prompt modifiers have been the subject of recent related research~\cite{oppenlaender_taxonomy_2023}.
 Generally speaking, modifiers act as a means of directing the output towards a desired outcome.
-In our case, the various categories provide insight into the way users customize prompts and
-thereby intend to tailor the model output.
-For the prompting setting of LLMs, we selected different categories based on related work,
-and for the type of prompt we grouped by common use case categories.
-This approach enables additional insights if for example longer, more complex queries with a
-lot of modifiers improve the results or do not have the desired beneficial effect.
+In our case, the various categories aimed to provide insights into the way users approach prompting
+a model in general and how they may adapt their behavior during the course of a conversation in
+order to tailor the output.
 While existing taxonomies often classify individual parts of a prompt, and use
 categories such as ``subject term'', ``style modifier'', or ``quality booster''~\cite{oppenlaender_taxonomy_2023}, we
 investigate interactions as a whole.
 
-For ShareGPT, we first of all classified the prompt by type, as in theory any kind of prompt is
-possible, because users are solely constrained to natural language in any shape or form.
-In the next category, it was mainly of interest what the user intended to achieve with their
+To obtain a comprehensive and complete analysis, we followed a blueprint of separating the
+categories into the main topics of motivation, shape of the prompt, and user behavior.
+Motivation entailed the categories Type and Intent, shape of the prompt contained Length, Prompt
+Setting, as well as Complexity, and user behavior was made up of Engagement, Refinement, and
+Language.
+Accordingly, in the first category we classified the prompt into common use case
+subcategories, as in theory any kind of prompt is possible, because users are solely constrained to natural language
+in any shape or form.
+In the Intent category, it was mainly of interest what the user intended to achieve with their
 individual prompts,
 i.e.\ what they use the model for.
-The categories prompt length and setting refer to the number of sentences in the user inputs, and
-whether any examples were provided as part of the query.
-Engagement refers to the amount of exchange in the interaction.
+For the prompting setting of LLMs, we used subcategories based on related work in
+Section~\ref{subsubsec:few-shot-learning-capabilities}.
+We then tried to understand if for example longer, more complex queries with a
+lot of modifiers improve the results or do not have the desired beneficial effect.
+The category Engagement refers to the amount of exchange in the interaction.
 If the user prompted the model multiple times (at least twice) during the course of the
 conversation, we considered the interaction multi turn, otherwise single turn.
 The prompt's complexity gave us an idea whether users leverage ChatGPT for simple
@@ -121,6 +128,10 @@ In general, when a single conversation consisted of multiple prompts, we labeled
 most frequently observed category or significant behavior.
 
 We classified Midjourney interactions using a similar approach.
+However since the motivation is generally obvious using an image creation AI tool, we emitted this
+topic, and instead focused on the shape of the prompt and user behavior.
+Shape of the prompt contained Input Type, Length, Composition, and Complexity,
+and user behavior was made up of Refinement, Language, Clarity, and Satisfaction.
 First of all, we differentiated between image- and purely language-based inputs.
 We then considered the length of the prompt, and whether it consisted solely of keywords, one
 or more sentences, or a mix of both.

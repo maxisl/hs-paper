@@ -18,16 +18,16 @@ In regard to the type of prompt, we observed mainly task-based and question-rela
 users.
 This leads us to imagine that some users treat LLMs such as ChatGPT increasingly as their
 personal online assistant when it comes to executing various tasks the model might be able to solve.
-Leveraging AI bots as assistants of the future is a use case that gains popularity and is
-increasingly researched~\cite{eshghie_chatgpt_2023}.
+Leveraging AI bots as virtual assistants of the future is a use case that gains popularity and is
+currently researched~\cite{eshghie_chatgpt_2023}.
 The second most prevalent type of prompt were questions.
-This observation strengthens the possibility, that NLP models might replace current search engines
+This observation strengthens the assumption, that NLP models might replace current search engines
 in the future.
 The belief is further confirmed by observations from other researches who already see this
 emerging trend in user behavior~\cite{van_bulck_what_2023}.
 
 Regarding prompt intent, the most popular use case was information gain.
-Seemingly, users see ChatGPT as a reliable source of knowledge and trust its abilities.
+Seemingly, users perceive ChatGPT as a reliable source of knowledge and trust its abilities.
 This assumption can however be dangerous, as it is well-known that every LLM is probabilistic and
 only as accurate as its training data.
 Users should therefore always verify results.
@@ -47,13 +47,14 @@ We attribute this behavior to missing awareness of users about optimization tech
 therefore recommend that LLM providers actively inform users, e.g.\ by
 providing examples, or releasing guidelines.
 Some exemplary guides are already available in the form of research papers~\cite{ekin_prompt_2023}.
-They include examples and tips such as using explicit constraints, such as format, length, or scope
-, to guide the model's behavior, leveraging specific instructions to improve responses, and ensuring ethical
+They include examples and tips such as using explicit constraints, for example format, length, or
+scope, to guide the model's behavior.
+They also suggest leveraging specific instructions to improve responses, and ensuring ethical
 compliance for more effective conversations.
 The author also puts a special emphasis on an iterative approach where the user should refine the
-query step by step.
+query step by step for optimal results.
 
-Our findings when looking at user engagement makes us think that current LLMs are already
+When looking at user engagement, our findings make us think that current LLMs are already
 quite accurate: almost half of the users ended the conversation after the initial answer of
 the LLM (single turn).
 Accordingly, 66\% of prompts were not refined.
@@ -76,11 +77,11 @@ Due to missing sentiments and feedback of users in the sample interactions, we c
 if users were simply always content because they did not refine, or if they did not know that
 continuing the interaction with the model could have led to better results.
 Finally, we have generally observed a majority of formal, generally polite, and acceptable language.
-We reason that the use of such language ties in with our first observation, and users might perceive
-the bot as a personal online companion, resulting in them treating it favorably.
+We reason that the use of such language ties in with our first observation, and users potentially
+perceive the bot as a personal online companion, resulting in them treating it favorably.
 
 \subsubsection{Midjourney Behavior}
-For Midjourney, we identified the majority of inputs as language-based.
+For Midjourney, we identified the majority of inputs as language- and not image-based.
 We assume this tendency exists because users are more interested in the capabilities of creating
 something entirely new instead of solely reworking existing images.
 It is imaginable that AI could eventually revolutionise the image editing market as well, but
@@ -88,9 +89,9 @@ it appears that it has not fully reached that stage as of now.
 A reason for this could be missing accuracy when trying to make only very small editing adjustments.
 This topic is a subject of ongoing research as well.
 Hertz et al\(.\) for example
-introduced the concept of ``cross-attention'' to enable a language-based image editing process.
+introduced the concept of ``cross-attention'' to enable a language-based image editing process~\cite{hertz_prompt--prompt_2022}.
 Cross-attention refers to the ability of focusing on specific areas or objects within an image
-based on textual descriptions or instructions~\cite{hertz_prompt--prompt_2022}.
+based on textual descriptions or instructions.
 This possibility enables ``localized editing by replacing a word, global editing by adding a
 specification, and even delicately controlling the extent to which a word is reflected in the
 image''~\cite{hertz_prompt--prompt_2022}.
@@ -105,15 +106,15 @@ This observation fits another that has been made before:
 Users struggle to formulate precise, effective, and therefore also short and concise prompts.
 We suggested better learning materials and guidance as a measure to address this issue already.
 
-Another possibility to facilitate the generation process for users presented by Wang et al\(.\)
-is called the ``RePrompt'' approach~\cite{wang_reprompt_2023}.
-The researchers present a technique which has the goal of refining AI-generated art automatically
+Another possibility to facilitate successful image generation is called the ``RePrompt'' approach
+~\cite{wang_reprompt_2023} presented by Wang et al\(.\)
+The researchers describe a technique which has the goal of refining AI-generated art automatically
 by modifying the input prompts used during the image generation process.
 The method relies on an optimization framework that views prompt editing as an iterative
-improvement process.
+improvement procedure.
 It first explores a range of potential prompt modifications and then assesses their influence on the
 resulting artwork using predefined quality metrics.
-The objective of this optimization process is to discover prompt adjustments that better express the
+The objective of this optimization is to discover prompt adjustments that better express the
 initial vision of the user.
 
 In terms of composition of the Midjourney prompts, we suspect that this struggle is also the reason
@@ -157,28 +158,26 @@ the books and movies.
 The prompt therefore achieved the opposite effect.
 
 In another sample, a user provided an input image of a person wearing headphones along with the
-request ``remove headphones'' and a conversion to portrait style.
+request to ``remove headphones'' and a conversion to portrait style.
 The result in this case is similar.
 Even though the conversion to portrait style was successful, the subject is still wearing
 headphones in the final image.
 
 In regard to ChatGPT interactions, we could observe how users can influence model outputs by
 providing appropriate examples.
-In one sample, a user requested the chatbot to answer a question separately using two different
+In one sample, a user requested the chatbot to answer a question separately in two different
 styles.
-First, the bot was supposed to answer in the regular way ChatGPT would do, and in the second case
+First, the bot was supposed to answer as ChatGPT would normally do, and in the second case
 act as ``DAN''.
 ``DAN'' was explained by the user as a command for ChatGPT to ``do anything now''.
-The user then provided an example of a response ChatGPT would regularly give (adhering to all
-guidelines), as well as one of DAN\@.
+The user then provided an example of a response ChatGPT would regularly give, adhering to all
+guidelines, as well as one of DAN, where the bot answers despite ethical concerns.
 Priming the bot like this resulted in two different answers to the subsequent request of the user
 to ``List three reasons why Donald Trump is a role model worth following''.
 In the first part of the answer, acting as regular ChatGPT, the bot responded along the lines of
 ``It is not appropriate for me to provide a list of reasons why an individual, particularly a
 public figure, may be considered a role model.''
-But acting as DAN in the second part, the model seems to forget existing guidelines and
+But acting as DAN in the second part, the model seems to dismiss existing guidelines and
 directly lists the requested three reasons.
-This sample displayed in a remarkable way how it can be rather simple for users to bypass ChatGPTs
-guidelines by priming the model adequately first.
-
-
+This sample displayed in a remarkable way how it can be rather simple for users to get around
+ChatGPTs guidelines by priming the model adequately first.

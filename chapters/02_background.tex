@@ -72,7 +72,7 @@ Popular implementations of Diffusion Models include DALL-E 2~\footnote{\url{http
 \newline
 
 The primary method of interacting with LLMs and text-to-image generation tools is the previously
-mentioned approach of \("\)prompting\("\).
+mentioned approach of ``prompting''.
 Currently, there are no binding guidelines on the concrete structure of prompts,
 and users are therefore rather unconfined in their way of use.
 In the following, we go into more detail about different types of prompts, namely zero, one, and
@@ -81,18 +81,19 @@ few shot.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ZERO SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Zero Shot Learning} % TODO Zero-Shot prompting instead of learning?
-It is important to differentiate possible forms of prompting that exist in interactions in order
-to be able to correctly analyze and assess prompts in later parts of this paper.
-To do so, we will clarify the terms \("\)Zero Shot \("\) and \("\)Few Shot Learning\("\).
-Zero Shot Learning has been described as \("\)[\ldots] learning how to recognise
-new concepts by just having a description of them\("\)\cite[p. 1]{feris_embarrassingly_2015}.
+To properly analyze prompting, it is crucial to distinguish different
+types of prompts, as they are a key characteristic for a correct analysis and assessment in
+later parts of this paper.
+To do so, we will clarify the terms ``Zero Shot'' and ``Few Shot Learning''.
+Zero Shot Learning has been described as ``[\ldots] learning how to recognise
+new concepts by just having a description of them''\cite[p. 1]{feris_embarrassingly_2015}.
 In regard to prompting, zero shot refers to any form of prompt where the user does not specify
 a particular example as part of the query~\cite[p. 1]{dang_how_2022}.
-An example for such a prompt could be \("\)Give me five examples of papers that deal with the topic
-of LLMs\("\).
+An example for such a prompt could be ``Give me five examples of papers that deal with the topic
+of LLMs''.
 As expected, model performance (accuracy) was measured as inferior in zero shot prompting
-settings compared
-to other settings where more information is provided in the prompt, such as a few shot approach~\cite[p. 5]{brown_language_2020}.
+settings compared to other settings where more information is provided in the prompt, such as a
+few shot approach~\cite[p. 5]{brown_language_2020}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FEW-SHOT LEARNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -100,12 +101,12 @@ to other settings where more information is provided in the prompt, such as a fe
 In Few Shot Learning in contrast, users give examples, albeit they do not necessarily have to
 provide many.
 It is generally aimed at ensuring good learning performance with only a few (most often less than 20)
-supervised examples~\cite[p. 1]{samuel_offline_2022}. % TODO word repetition: example
+supervised examples~\cite[p. 1]{samuel_offline_2022}.
 In a few shot prompting setting, the user accordingly does provide increased guidance for the model.
 Doing so can help improve model outputs~\cite[p. 1]{dang_how_2022}.
-Solely giving one demonstration in the prompt is commonly referred to as a \("\)One Shot\("\)
+Solely giving one demonstration in the prompt is commonly referred to as a ``One Shot''
 approach~\cite[p. 6]{brown_language_2020},
-whereas multiple demonstrations make it \("\)Few Shot\("\).
+whereas multiple demonstrations make it ``Few Shot''.
 To exemplify the differences in learning capabilities depending on the prompting setting,
 we present an example inspired by the approach of Brown et al\(.\)~\cite{brown_language_2020}
 and recent online resources~\cite{dairai_few-shot_2023} in Table~\ref{tab:odd_number_sum}.
@@ -154,6 +155,10 @@ Depending on the model training and technological progress, it is imaginable tha
 iterations, such as ChatGPT-4, will improve performance and may therefore not have to
 rely on few shot assistance as much.
 
+In addition to the prompting setting, many other characteristics of prompts are conceivable for a
+dedicated analysis.
+We will present select categories and justify their use for our analysis in Section~\ref{subsec:research-method:-sharegpt-and-midjourney}.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% USER INTERACTION WITH LLMS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % / RELATED WORK
 
@@ -178,7 +183,7 @@ Huang and Efthimiadis~\cite{huang_analyzing_2009} investigated user behavior whe
 queries, i.e.\ modifying a previous query in order to improve results, in as early as 2009.
 Even though their focus was on search queries only, it was significant that they identified
 measurable improvements after reformulating queries, concluding that
-\("\)most reformulation strategies result in some benefit to the user\("\)~\cite[p. 1]{huang_analyzing_2009}.
+``most reformulation strategies result in some benefit to the user''~\cite[p. 1]{huang_analyzing_2009}.
 
 % TODO add more context: how does this conclusion relate to our research?
 % TODO add another source? e.g. Query Reformulation Techniques for Web Search: A Comprehensive Survey
@@ -213,10 +218,10 @@ The trials revealed two main reasons for these problems:
     \item First of all, non-experts suffered from over-generalization based on past, limited experiences,
     or single observations of success and failure of prompt adjustments, which may not be universally
     transferable. % TODO sentence too complicated
-    This tendency could be identified in the trials when \("\)participants often stopped iterating
+    This tendency could be identified in the trials when ``participants often stopped iterating
     once the [desired model] behavior was observed in a single conversational context,
     without considering other conversations or contexts—or gave up too early
-    if the behavior was not observed\("\)~\cite[p. 10]{zamfirescu-pereira_why_2023}.
+    if the behavior was not observed''~\cite[p. 10]{zamfirescu-pereira_why_2023}.
     \item Secondly, people often mistakenly perceive AI systems as human-like conversational
     partners.
     The participants expected AI models to behave as in a human-to-human interaction,
